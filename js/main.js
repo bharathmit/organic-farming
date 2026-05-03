@@ -1,3 +1,38 @@
+// Language toggle
+const langBtns = document.querySelectorAll('.lang-btn');
+langBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    langBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    if (lang === 'ta') {
+      document.body.classList.add('tamil');
+    } else {
+      document.body.classList.remove('tamil');
+    }
+  });
+});
+
+// Dropdown toggle (for mobile tap + desktop hover fallback)
+document.querySelectorAll('.has-dropdown').forEach(item => {
+  const toggle = item.querySelector('.dropdown-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        item.classList.toggle('open');
+      }
+    });
+  }
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', e => {
+  if (!e.target.closest('.has-dropdown')) {
+    document.querySelectorAll('.has-dropdown.open').forEach(d => d.classList.remove('open'));
+  }
+});
+
 // Navbar toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
