@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – GreenRoots Organic Farm</title>
+  <meta name="description" content="Get in touch with GreenRoots Organic Farm. We'd love to hear from you — for orders, partnerships, farm visits, or any questions." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🌿</span>
+        GreenRoots
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="products.html" class="nav-cta">Shop Now</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-tag">Get in Touch</span>
+    <h1>We'd Love to Hear From You</h1>
+    <p>Whether you have a question about our products, want to arrange a farm visit, or explore a business partnership — our team is here to help.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h2>Reach Out to Us</h2>
+        <p>We typically respond within 4–6 hours on business days. For urgent order queries, please call us directly.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Farm Address</h4>
+            <p>Green Valley Organic Estate<br/>Madikeri, Coorg District<br/>Karnataka – 571 201, India</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone & WhatsApp</h4>
+            <p>+91 80 1234 5678<br/>+91 99001 23456 (WhatsApp)</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>hello@greenroots.in (General)<br/>orders@greenroots.in (Orders)<br/>partner@greenroots.in (B2B)</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">⏰</div>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Monday – Saturday: 8:00 AM – 7:00 PM<br/>Sunday: 9:00 AM – 1:00 PM (Queries only)</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🚜</div>
+          <div>
+            <h4>Farm Visits</h4>
+            <p>We welcome guided farm visits on Saturdays! Book at least one week in advance. Suitable for families, schools, and corporate teams.</p>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <h4 style="margin-top: 32px; margin-bottom: 14px; color: var(--green-dark);">Follow Us</h4>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook" style="background: var(--green-pale);">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram" style="background: var(--green-pale);">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter" style="background: var(--green-pale);">🐦</a>
+          <a href="#" class="social-link" aria-label="YouTube" style="background: var(--green-pale);">▶️</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--green-dark); margin-bottom: 8px;">Send Us a Message</h3>
+        <p style="color: var(--gray); margin-bottom: 28px; font-size: 0.92rem;">Fill in the form below and we'll get back to you as soon as possible.</p>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Your first name" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Your last name" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a topic</option>
+              <option value="order">Order & Delivery</option>
+              <option value="products">Product Query</option>
+              <option value="visit">Farm Visit</option>
+              <option value="partnership">Business / B2B Partnership</option>
+              <option value="media">Media & Press</option>
+              <option value="feedback">Feedback / Suggestion</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">✉️ Send Message</button>
+          <div class="success-msg" id="successMsg">
+            ✅ Thank you! Your message has been sent. We'll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Common Questions</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Quick answers to the questions we hear most often.</p>
+    </div>
+    <div class="cards-grid cards-2" style="gap: 20px;">
+      <div class="feature-card">
+        <h3>🌿 Are your products really 100% organic?</h3>
+        <p>Yes. All our produce is certified by APEDA and NPOP (India Organic). We undergo annual third-party audits and every product has a traceable farm code you can verify online.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🚚 How long does delivery take?</h3>
+        <p>Order before 10 AM and we harvest same day. Delivery is next day for Bengaluru, Chennai, Mumbai, Hyderabad, and Pune. Other cities within 2 days.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔄 What if I'm not satisfied with freshness?</h3>
+        <p>We stand behind our freshness guarantee 100%. If you're not satisfied, contact us within 24 hours of delivery and we'll replace or fully refund your order — no questions asked.</p>
+      </div>
+      <div class="feature-card">
+        <h3>📦 Do you do bulk / B2B orders?</h3>
+        <p>Absolutely! We supply organic produce to restaurants, hotels, hospitals, and corporate canteens at special rates. Email partner@greenroots.in or call us to discuss your requirements.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🏡 Can I visit the farm?</h3>
+        <p>Yes! We run guided farm tours on Saturdays. It's a wonderful experience for families, students, and nature lovers. Book via our contact form or call us at least one week in advance.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💳 What payment methods do you accept?</h3>
+        <p>We accept UPI (GPay, PhonePe, Paytm), all major credit/debit cards, net banking, and cash on delivery for orders under ₹2,000 in select cities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="container">
+    <h2>🌿 Stay in the Loop</h2>
+    <p>Subscribe for seasonal updates, new product alerts, and exclusive offers.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Enter your email address" required />
+      <button type="submit">Subscribe Free</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-icon">🌿</span> GreenRoots</div>
+        <p>Growing healthy food, nurturing the earth, and building a sustainable future — one harvest at a time.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="products.html">Vegetables</a></li>
+          <li><a href="products.html">Fruits</a></li>
+          <li><a href="products.html">Grains & Pulses</a></li>
+          <li><a href="products.html">Herbs & Spices</a></li>
+          <li><a href="products.html">Dairy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">📍 Green Valley Farm, Coorg, Karnataka</a></li>
+          <li><a href="tel:+918012345678">📞 +91 80 1234 5678</a></li>
+          <li><a href="mailto:hello@greenroots.in">✉️ hello@greenroots.in</a></li>
+          <li><a href="#">⏰ Mon–Sat: 8AM – 7PM</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GreenRoots Organic Farm. All rights reserved.</span>
+      <span>Made with 🌿 for a healthier planet</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
