@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title Here</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <style>
+    .lang-ta { display: none; }
+    body.tamil .lang-en { display: none; }
+    body.tamil .lang-ta { display: inline; }
+
+    main { margin-top: 100px; padding: 2rem 0; }
+    @media(max-width: 768px) {
+      main { margin-top: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header and Footer are automatically loaded by template.js -->
+<!-- You don't need to add header or footer manually -->
+
+<main class="container">
+  <h1><span class="lang-en">Page Title</span><span class="lang-ta">பக்க தலைப்பு</span></h1>
+  <p class="lang-en">Your content goes here...</p>
+  <p class="lang-ta">உங்கள் உள்ளடக்கம் இங்கே செல்கிறது...</p>
+</main>
+
+<!--
+  INSTRUCTIONS FOR CREATING NEW PAGES:
+
+  1. Copy this file as your new page (e.g., new-page.html)
+
+  2. Update the following:
+     - <title> tag with your page title
+     - <h1> with your page heading (add both English and Tamil versions)
+     - Replace the content with your page content
+
+  3. For language support, always use this pattern:
+     <span class="lang-en">English text here</span>
+     <span class="lang-ta">Tamil text here</span>
+
+  4. The header and footer are automatically injected by template.js
+     - No need to manually add header or footer code
+     - Any changes to template.js will affect ALL pages
+
+  5. Make sure to include:
+     - <link rel="stylesheet" href="css/style.css" />
+     - <script src="js/template.js"></script> (at the end of body)
+
+  6. Language toggle and all functionality is handled by template.js
+     - Language preference is saved in localStorage
+     - Persists across all pages
+-->
+
+<script src="js/template.js"></script>
+</body>
+</html>
