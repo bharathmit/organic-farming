@@ -1,10 +1,35 @@
 // Language toggle
 const langBtns = document.querySelectorAll('.lang-btn');
+
+// Restore language preference on page load
+function restoreLanguage() {
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  langBtns.forEach(btn => {
+    if (btn.dataset.lang === savedLang) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+  if (savedLang === 'ta') {
+    document.body.classList.add('tamil');
+  } else {
+    document.body.classList.remove('tamil');
+  }
+}
+
+// Initialize language on load
+restoreLanguage();
+
 langBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     const lang = btn.dataset.lang;
     langBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+
+    // Save language preference
+    localStorage.setItem('preferredLanguage', lang);
+
     if (lang === 'ta') {
       document.body.classList.add('tamil');
     } else {
