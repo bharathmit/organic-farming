@@ -581,7 +581,7 @@ img { max-width: 100%; display: block; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1.6fr repeat(5, 1fr);
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -703,6 +703,7 @@ body.tamil .lang-en { display: none; }
 body.tamil .lang-ta { display: block; }
 body:not(.tamil) .lang-ta { display: none; }
 body:not(.tamil) .lang-en { display: block; }
+body:not(.tamil) .nav-links a span.lang-en, body.tamil .nav-links a span.lang-ta { display: inline; }
 
 /* ============================
    DROPDOWN MENU
