@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | GreenRoots Farm Guide</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Contact & Farm Visit | GreenRoots Farm Guide</title>
+  <link rel="stylesheet" href="css/style.css?v=20261115" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
   <style>
     main.container { margin-top: 100px; padding-top: 2rem; padding-bottom: 3rem; }
@@ -17,23 +17,106 @@
     .plan-box { background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 1.2rem 1.4rem; max-width: 760px; }
     .plan-box h2 { font-size: 1.05rem; margin-bottom: 0.6rem; }
     .plan-box li { margin: 0 0 0.45rem 1.1rem; line-height: 1.5; color: #333; }
-
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 20px; align-items: start; }
+    @media(max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .visit-form label { display: block; font-size: 0.9rem; font-weight: 500; margin: 0.8rem 0 0.3rem; color: #333; }
+    .visit-form input, .visit-form select, .visit-form textarea { width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 8px; font: inherit; font-size: 0.95rem; box-sizing: border-box; }
+    .visit-form textarea { min-height: 80px; }
+    .visit-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .visit-form button { margin-top: 1.2rem; width: 100%; padding: 12px; border: 0; border-radius: 8px; background: #25D366; color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; }
+    .visit-form button:hover { background: #1ebe5b; }
+    .note { font-size: 0.85rem; color: #777; margin-top: 0.6rem; }
+    .err { color: #b00020; font-size: 0.85rem; margin-top: 0.6rem; display: none; }
   </style>
 </head>
 <body>
 
 <main class="container">
-  <h1><span class="lang-en">Contact</span><span class="lang-ta">தொடர்பு</span></h1>
-  <p class="sub"><span class="lang-en">Questions about any guide? Reach us below.</span><span class="lang-ta">ஏதேனும் வழிகாட்டி பற்றிய கேள்விகளா? கீழே தொடர்பு கொள்ளுங்கள்.</span></p>
-  <div class="plan-box">
-    <ul style="list-style:none">
-      <li style="margin-left:0">📍 <span class="lang-en">Villupuram, Tamil Nadu</span><span class="lang-ta">விழுப்புரம், தமிழ்நாடு</span></li>
-      <li style="margin-left:0">📞 +91 98765 43210</li>
-      <li style="margin-left:0">✉️ info@greenroots.farm</li>
-    </ul>
+  <h1><span class="lang-en">Contact & farm visit</span><span class="lang-ta">தொடர்பு & பண்ணை வருகை</span></h1>
+  <p class="sub"><span class="lang-en">Questions about any guide, or want to see integrated organic farming in practice? Register for a farm visit below — we confirm the date on WhatsApp.</span><span class="lang-ta">ஏதேனும் வழிகாட்டி பற்றிய கேள்விகளா, அல்லது ஒருங்கிணைந்த இயற்கை விவசாயத்தை நேரில் பார்க்க விரும்புகிறீர்களா? கீழே பண்ணை வருகைக்குப் பதிவு செய்யுங்கள் — தேதியை வாட்ஸ்அப்பில் உறுதி செய்வோம்.</span></p>
+  <div class="contact-grid">
+    <div class="plan-box">
+      <h2><span class="lang-en">Reach us</span><span class="lang-ta">தொடர்பு கொள்ள</span></h2>
+      <ul style="list-style:none">
+        <li style="margin-left:0">📍 <span class="lang-en">Villupuram, Tamil Nadu</span><span class="lang-ta">விழுப்புரம், தமிழ்நாடு</span></li>
+        <li style="margin-left:0">📞 +91 98765 43210</li>
+        <li style="margin-left:0">✉️ info@greenroots.farm</li>
+      </ul>
+      <h2 style="margin-top:1rem"><span class="lang-en">Farm visits</span><span class="lang-ta">பண்ணை வருகை</span></h2>
+      <ul>
+        <li><span class="lang-en">By appointment only — register using the form</span><span class="lang-ta">முன்பதிவின் பேரில் மட்டும் — படிவம் மூலம் பதிவு செய்யவும்</span></li>
+        <li><span class="lang-en">Individuals, farmer groups, students and organic conversion consultations welcome</span><span class="lang-ta">தனிநபர்கள், விவசாயக் குழுக்கள், மாணவர்கள், இயற்கை மாற்ற ஆலோசனை — அனைவரும் வரவேற்கப்படுகிறார்கள்</span></li>
+        <li><span class="lang-en">Wear field footwear; carry water and a hat</span><span class="lang-ta">வயலுக்கேற்ற காலணி அணியவும்; தண்ணீர், தொப்பி எடுத்து வரவும்</span></li>
+      </ul>
+    </div>
+    <form class="plan-box visit-form" id="visitForm" novalidate>
+      <h2><span class="lang-en">Farm visit registration</span><span class="lang-ta">பண்ணை வருகைப் பதிவு</span></h2>
+      <label for="vName"><span class="lang-en">Full name</span><span class="lang-ta">முழுப் பெயர்</span> *</label>
+      <input id="vName" required autocomplete="name">
+      <div class="row">
+        <div><label for="vPhone"><span class="lang-en">Mobile / WhatsApp</span><span class="lang-ta">கைபேசி / வாட்ஸ்அப்</span> *</label>
+        <input id="vPhone" type="tel" required autocomplete="tel" inputmode="tel"></div>
+        <div><label for="vPlace"><span class="lang-en">Town / district</span><span class="lang-ta">ஊர் / மாவட்டம்</span></label>
+        <input id="vPlace"></div>
+      </div>
+      <div class="row">
+        <div><label for="vDate"><span class="lang-en">Preferred date</span><span class="lang-ta">விரும்பும் தேதி</span> *</label>
+        <input id="vDate" type="date" required></div>
+        <div><label for="vCount"><span class="lang-en">Number of visitors</span><span class="lang-ta">வருபவர்கள் எண்ணிக்கை</span></label>
+        <input id="vCount" type="number" min="1" value="1"></div>
+      </div>
+      <label for="vType"><span class="lang-en">Purpose of visit</span><span class="lang-ta">வருகையின் நோக்கம்</span></label>
+      <select id="vType">
+        <option value="tour" data-en="Integrated farm tour" data-ta="ஒருங்கிணைந்த பண்ணைச் சுற்றுப்பயணம்">Integrated farm tour</option>
+        <option value="conversion" data-en="Organic conversion consultation" data-ta="இயற்கை மாற்ற ஆலோசனை">Organic conversion consultation</option>
+        <option value="dairy" data-en="Dairy, biogas & fodder" data-ta="பால் பண்ணை, உயிர் வாயு & தீவனம்">Dairy, biogas & fodder</option>
+        <option value="crops" data-en="Organic paddy & inputs" data-ta="இயற்கை நெல் & உள்ளீடுகள்">Organic paddy & inputs</option>
+        <option value="group" data-en="Farmer group / students" data-ta="விவசாயக் குழு / மாணவர்கள்">Farmer group / students</option>
+      </select>
+      <label for="vMsg"><span class="lang-en">Message (optional)</span><span class="lang-ta">செய்தி (விருப்பம்)</span></label>
+      <textarea id="vMsg"></textarea>
+      <div class="err" id="vErr"><span class="lang-en">Please fill name, mobile number and date.</span><span class="lang-ta">பெயர், கைபேசி எண், தேதியை நிரப்பவும்.</span></div>
+      <button type="submit"><span class="lang-en">Register via WhatsApp</span><span class="lang-ta">வாட்ஸ்அப் மூலம் பதிவு செய்</span></button>
+      <p class="note"><span class="lang-en">This opens WhatsApp with your details filled in — tap Send to complete registration.</span><span class="lang-ta">உங்கள் விவரங்களுடன் வாட்ஸ்அப் திறக்கும் — பதிவை முடிக்க அனுப்பு என்பதைத் தட்டவும்.</span></p>
+    </form>
   </div>
+<script>
+// WhatsApp number that receives visit registrations (country code + number, digits only)
+const VISIT_WHATSAPP = '919876543210';
+(function () {
+  const f = document.getElementById('visitForm');
+  const v = id => document.getElementById(id).value.trim();
+  const d = document.getElementById('vDate');
+  d.min = new Date().toISOString().slice(0, 10);
+  // show option labels in the selected language
+  function syncOptions() {
+    const ta = document.body.classList.contains('tamil');
+    document.querySelectorAll('#vType option').forEach(o => o.textContent = ta ? o.dataset.ta : o.dataset.en);
+  }
+  new MutationObserver(syncOptions).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  syncOptions();
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const ok = v('vName') && v('vPhone') && v('vDate');
+    document.getElementById('vErr').style.display = ok ? 'none' : 'block';
+    if (!ok) return;
+    const type = document.getElementById('vType').selectedOptions[0].dataset.en;
+    const msg = [
+      'Farm visit registration',
+      'Name: ' + v('vName'),
+      'Mobile: ' + v('vPhone'),
+      v('vPlace') && 'Place: ' + v('vPlace'),
+      'Date: ' + v('vDate'),
+      'Visitors: ' + (v('vCount') || '1'),
+      'Purpose: ' + type,
+      v('vMsg') && 'Message: ' + v('vMsg')
+    ].filter(Boolean).join('\n');
+    window.open('https://wa.me/' + VISIT_WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank');
+  });
+})();
+</script>
 </main>
 
-<script src="js/template.js"></script>
+<script src="js/template.js?v=20261115"></script>
 </body>
 </html>
