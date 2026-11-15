@@ -1,321 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GreenRoots Organic Farm – Fresh, Healthy & Sustainable</title>
-  <meta name="description" content="GreenRoots Organic Farm delivers fresh, certified organic produce straight from our farm to your table. Sustainable farming for a healthier world." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenRoots Farm Guide — Organic Farming, Dairy, Land &amp; Water</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <style>
+    main.container { margin-top: 100px; padding-top: 2rem; padding-bottom: 3rem; }
+    @media(max-width: 768px) { main.container { margin-top: 80px; } }
+    body:not(.tamil) main span.lang-en, body.tamil main span.lang-ta { display: inline; }
+    .crumb { font-size: 0.85rem; color: #888; margin-bottom: 0.4rem; }
+    h1 { font-size: 1.8rem; font-weight: 600; margin-bottom: 0.6rem; }
+    .sub { font-size: 1rem; color: #555; line-height: 1.7; margin-bottom: 1.5rem; max-width: 760px; }
+    .soon { display: inline-block; font-size: 0.8rem; padding: 4px 12px; border-radius: 20px; background: #fce8d1; color: #854F0B; font-weight: 500; margin-bottom: 1rem; }
+    .plan-box { background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 1.2rem 1.4rem; max-width: 760px; }
+    .plan-box h2 { font-size: 1.05rem; margin-bottom: 0.6rem; }
+    .plan-box li { margin: 0 0 0.45rem 1.1rem; line-height: 1.5; color: #333; }
+    .home-hero { background: linear-gradient(135deg, #d8f3dc, #f5f5ef); border-radius: 16px; padding: 2.2rem 1.6rem; margin-bottom: 2rem; }
+    .home-hero h1 { font-size: 2rem; }
+    .sec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .sec-card { background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 1.2rem; }
+    .sec-card h2 { font-size: 1.15rem; margin-bottom: 0.7rem; }
+    .sec-card ul { list-style: none; padding: 0; margin: 0; }
+    .sec-card li { margin-bottom: 0.45rem; }
+    .sec-card a { color: #2d6a4f; text-decoration: none; }
+    .sec-card a:hover { text-decoration: underline; }
+    .tag { font-size: 0.7rem; padding: 1px 8px; border-radius: 10px; margin-left: 4px; white-space: nowrap; }
+    .tag-ready { background: #d8f3dc; color: #2d6a4f; }
+    .tag-soon { background: #f0f0ec; color: #888; }
+  </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container">
-    <nav class="navbar">
-      <a href="index.html" class="logo">
-        <span class="logo-icon">🌿</span>
-        GreenRoots
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html"><span class="lang-en">Home</span><span class="lang-ta">முகப்பு</span></a></li>
-        <li><a href="about.html"><span class="lang-en">About</span><span class="lang-ta">பற்றி</span></a></li>
-        <li><a href="products.html"><span class="lang-en">Products</span><span class="lang-ta">பொருட்கள்</span></a></li>
-        <li class="has-dropdown">
-          <a href="#" class="dropdown-toggle">
-            <span class="lang-en">Information</span>
-            <span class="lang-ta">தகவல்கள்</span>
-          </a>
-          <div class="dropdown-menu">
-            <a href="organic-pest-control.html">
-              <span class="menu-icon">🐛</span>
-              <span><span class="lang-en">Organic Pest Control</span><span class="lang-ta">இயற்கை பூச்சி மேலாண்மை</span></span>
-            </a>
-            <a href="complete-inputs-guide-new.html">
-              <span class="menu-icon">🌾</span>
-              <span><span class="lang-en">Complete Organic Inputs</span><span class="lang-ta">முழு இயற்கை உள்ளீடுகள்</span></span>
-            </a>
-          </div>
-        </li>
-        <li><a href="blog.html"><span class="lang-en">Blog</span><span class="lang-ta">கட்டுரைகள்</span></a></li>
-        <li><a href="contact.html"><span class="lang-en">Contact</span><span class="lang-ta">தொடர்பு</span></a></li>
-        <li><a href="products.html" class="nav-cta"><span class="lang-en">Shop Now</span><span class="lang-ta">வாங்குங்கள்</span></a></li>
-        <li class="lang-toggle">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="ta">தமிழ்</button>
-        </li>
-      </ul>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
-</header>
+<main class="container">
+  <section class="home-hero">
+    <h1><span class="lang-en">Organic farm guide — Villupuram</span><span class="lang-ta">இயற்கை பண்ணை வழிகாட்டி — விழுப்புரம்</span></h1>
+    <p class="sub" style="margin-bottom:0"><span class="lang-en">Practical, field-tested information for setting up and running an organic farm: crops, dairy, farm infrastructure, and land &amp; water management. Every guide is in English and Tamil.</span><span class="lang-ta">இயற்கை பண்ணையை அமைத்து நடத்துவதற்கான நடைமுறைத் தகவல்கள்: பயிர்கள், பால் பண்ணை, பண்ணைக் கட்டமைப்பு, நிலம் &amp; நீர் மேலாண்மை. ஒவ்வொரு வழிகாட்டியும் ஆங்கிலம் மற்றும் தமிழில்.</span></p>
+  </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <span class="hero-badge">🌱 100% Certified Organic</span>
-      <h1>Farm Fresh &<br/><span>Naturally Grown</span><br/>for You</h1>
-      <p>From our soil to your table — we grow nutrient-rich, pesticide-free produce using sustainable farming methods that respect the earth and nourish your family.</p>
-      <div class="btn-group">
-        <a href="products.html" class="btn btn-primary">🛒 Shop Products</a>
-        <a href="about.html" class="btn btn-outline">Learn Our Story</a>
-      </div>
-    </div>
-    <div class="hero-visual">🌾</div>
+<div class="sec-grid">
+  <div class="sec-card">
+    <h2>🏗️ <span class="lang-en">Farm Setup</span><span class="lang-ta">பண்ணை அமைப்பு</span></h2>
+    <ul>
+      <li><a href="farm-layout.html">🗺️ <span class="lang-en">Farm layout & planning</span><span class="lang-ta">பண்ணை வடிவமைப்பு & திட்டமிடல்</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="biogas-slurry.html">🔥 <span class="lang-en">Biogas & slurry</span><span class="lang-ta">உயிர் வாயு & சாணக் கழிவு</span></a> <span class="tag tag-ready"><span class="lang-en">Ready</span><span class="lang-ta">தயார்</span></span></li>
+      <li><a href="sheds-storage.html">🏚️ <span class="lang-en">Sheds & storage</span><span class="lang-ta">கொட்டகைகள் & சேமிப்பு</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="solar-power.html">☀️ <span class="lang-en">Solar & power</span><span class="lang-ta">சூரிய சக்தி & மின்சாரம்</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+    </ul>
   </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">500+</div>
-        <div class="stat-label">Acres of Organic Land</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">12000+</div>
-        <div class="stat-label">Happy Customers</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">80+</div>
-        <div class="stat-label">Organic Products</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">15+</div>
-        <div class="stat-label">Years of Experience</div>
-      </div>
-    </div>
+  <div class="sec-card">
+    <h2>🌾 <span class="lang-en">Crops</span><span class="lang-ta">பயிர்கள்</span></h2>
+    <ul>
+      <li><a href="complete-inputs-guide-new.html">🌱 <span class="lang-en">Organic paddy inputs</span><span class="lang-ta">இயற்கை நெல் உள்ளீடுகள்</span></a> <span class="tag tag-ready"><span class="lang-en">Ready</span><span class="lang-ta">தயார்</span></span></li>
+      <li><a href="organic-pest-control.html">🐛 <span class="lang-en">Organic pest control</span><span class="lang-ta">இயற்கை பூச்சி மேலாண்மை</span></a> <span class="tag tag-ready"><span class="lang-en">Ready</span><span class="lang-ta">தயார்</span></span></li>
+      <li><a href="crop-calendar.html">📅 <span class="lang-en">Crop calendar</span><span class="lang-ta">பயிர் நாட்காட்டி</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="green-manure-fodder.html">🌿 <span class="lang-en">Green manure & fodder crops</span><span class="lang-ta">பசுந்தாள் உரம் & தீவனப் பயிர்கள்</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+    </ul>
   </div>
-</section>
-
-<!-- FEATURES -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">Why Choose Us</span>
-      <h2>The GreenRoots Difference</h2>
-      <p>We believe farming should be good for you, good for farmers, and good for the planet.</p>
-    </div>
-    <div class="cards-grid cards-4">
-      <div class="feature-card">
-        <div class="feature-icon">🌿</div>
-        <h3>100% Organic</h3>
-        <p>All our produce is certified organic with no synthetic pesticides or GMOs ever used on our land.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🚚</div>
-        <h3>Farm-to-Door Delivery</h3>
-        <p>Fresh produce harvested daily and delivered to your doorstep within 24 hours of picking.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">♻️</div>
-        <h3>Eco Packaging</h3>
-        <p>100% biodegradable and compostable packaging materials to minimize our environmental impact.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🤝</div>
-        <h3>Fair Trade</h3>
-        <p>We partner with local farmers, ensuring fair wages and supporting rural communities across the region.</p>
-      </div>
-    </div>
+  <div class="sec-card">
+    <h2>🐄 <span class="lang-en">Dairy Farm</span><span class="lang-ta">பால் பண்ணை</span></h2>
+    <ul>
+      <li><a href="dairy-herd-breeds.html">🐮 <span class="lang-en">Herd & breeds</span><span class="lang-ta">மந்தை & இனங்கள்</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="dairy-feed.html">🥣 <span class="lang-en">Feed & concentrate</span><span class="lang-ta">தீவனம் & அடர்தீவனம்</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="dairy-fodder-silage.html">🌽 <span class="lang-en">Fodder & silage</span><span class="lang-ta">பசுந்தீவனம் & ஊறுகாய்ப்புல்</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="dairy-health.html">💉 <span class="lang-en">Health & vaccination</span><span class="lang-ta">நலம் & தடுப்பூசி</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="dairy-milk-products.html">🧈 <span class="lang-en">Milk products (micro dairy)</span><span class="lang-ta">பால் பொருட்கள் (சிறு பால்பண்ணை)</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+    </ul>
   </div>
-</section>
-
-<!-- FEATURED PRODUCTS -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">Our Harvest</span>
-      <h2>Featured Organic Products</h2>
-      <p>Hand-picked seasonal favorites straight from our certified organic farm.</p>
-    </div>
-    <div class="cards-grid cards-3">
-      <div class="card">
-        <div class="card-img">🥦</div>
-        <div class="card-body">
-          <span class="card-tag">Vegetables</span>
-          <h3>Fresh Organic Broccoli</h3>
-          <p>Crisp, nutrient-packed broccoli grown without any chemicals. Rich in vitamins C and K.</p>
-          <div class="card-price">₹120 <span>/ 500g</span></div>
-          <button class="add-to-cart">🛒 Add to Cart</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img">🍎</div>
-        <div class="card-body">
-          <span class="card-tag">Fruits</span>
-          <h3>Kashmiri Red Apples</h3>
-          <p>Sweet, crunchy apples from high-altitude orchards. Zero pesticides, full of antioxidants.</p>
-          <div class="card-price">₹280 <span>/ kg</span></div>
-          <button class="add-to-cart">🛒 Add to Cart</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img">🌾</div>
-        <div class="card-body">
-          <span class="card-tag">Grains</span>
-          <h3>Organic Brown Rice</h3>
-          <p>Whole grain brown rice packed with fiber and essential minerals. Traditionally harvested.</p>
-          <div class="card-price">₹180 <span>/ kg</span></div>
-          <button class="add-to-cart">🛒 Add to Cart</button>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top: 40px;">
-      <a href="products.html" class="btn btn-primary">View All Products →</a>
-    </div>
+  <div class="sec-card">
+    <h2>💧 <span class="lang-en">Land & Water</span><span class="lang-ta">நிலம் & நீர்</span></h2>
+    <ul>
+      <li><a href="rainwater-harvesting.html">🌧️ <span class="lang-en">Rainwater harvesting</span><span class="lang-ta">மழைநீர் சேகரிப்பு</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="well-borewell-recharge.html">🕳️ <span class="lang-en">Open well & borewell recharge</span><span class="lang-ta">கிணறு & ஆழ்துளைக் கிணறு மீள்நிரப்பு</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="farm-pond.html">🏞️ <span class="lang-en">Farm pond</span><span class="lang-ta">பண்ணைக் குட்டை</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+      <li><a href="tree-planting.html">🌳 <span class="lang-en">Tree planting</span><span class="lang-ta">மரம் நடுதல்</span></a> <span class="tag tag-soon"><span class="lang-en">Soon</span><span class="lang-ta">விரைவில்</span></span></li>
+    </ul>
   </div>
-</section>
+</div>
+</main>
 
-<!-- PROCESS -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">How It Works</span>
-      <h2>From Seed to Your Table</h2>
-      <p>Our simple 4-step process ensures you get the freshest organic produce every time.</p>
-    </div>
-    <div class="cards-grid cards-4">
-      <div class="feature-card" style="text-align:center; border-top: 4px solid var(--green-dark);">
-        <div class="feature-icon">🌱</div>
-        <h3>1. Plant</h3>
-        <p>We sow only certified organic, non-GMO seeds in our nutrient-rich, composted soil.</p>
-      </div>
-      <div class="feature-card" style="text-align:center; border-top: 4px solid var(--green-dark);">
-        <div class="feature-icon">💧</div>
-        <h3>2. Cultivate</h3>
-        <p>Natural rainwater harvesting and drip irrigation keep our crops healthy and water-efficient.</p>
-      </div>
-      <div class="feature-card" style="text-align:center; border-top: 4px solid var(--green-dark);">
-        <div class="feature-icon">🧺</div>
-        <h3>3. Harvest</h3>
-        <p>Hand-harvested at peak ripeness by our skilled farmers for maximum freshness and nutrition.</p>
-      </div>
-      <div class="feature-card" style="text-align:center; border-top: 4px solid var(--green-dark);">
-        <div class="feature-icon">📦</div>
-        <h3>4. Deliver</h3>
-        <p>Packed in eco-friendly materials and delivered same-day or next-day to your home.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-tag">Happy Customers</span>
-      <h2>What Our Customers Say</h2>
-      <p>Real stories from families who've made the switch to organic.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p>The vegetables are incredibly fresh! I could taste the difference from the very first delivery. My whole family loves it and we've cut down on grocery store visits completely.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">👩</div>
-          <div>
-            <div class="author-name">Priya Sharma</div>
-            <div class="author-location">Bengaluru, Karnataka</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p>As a nutritionist, I recommend GreenRoots to all my clients. The produce quality is outstanding and knowing it's genuinely organic gives me complete peace of mind.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">👨‍⚕️</div>
-          <div>
-            <div class="author-name">Dr. Rajesh Kumar</div>
-            <div class="author-location">Chennai, Tamil Nadu</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p>Best decision we ever made for our family's health! The kids actually ask for more vegetables now. The packaging is eco-friendly too — a great brand with great values.</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">👩‍👧‍👦</div>
-          <div>
-            <div class="author-name">Anita & Suresh Mehta</div>
-            <div class="author-location">Mumbai, Maharashtra</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="container">
-    <h2>🌿 Join Our Organic Community</h2>
-    <p>Subscribe for seasonal recipes, farming tips, and exclusive member discounts.</p>
-    <form class="newsletter-form" id="newsletterForm">
-      <input type="email" placeholder="Enter your email address" required />
-      <button type="submit">Subscribe Free</button>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo">
-          <span class="logo-icon">🌿</span> GreenRoots
-        </div>
-        <p>Growing healthy food, nurturing the earth, and building a sustainable future — one harvest at a time.</p>
-        <div class="social-links">
-          <a href="#" class="social-link" aria-label="Facebook">📘</a>
-          <a href="#" class="social-link" aria-label="Instagram">📸</a>
-          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-          <a href="#" class="social-link" aria-label="YouTube">▶️</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Products</h4>
-        <ul>
-          <li><a href="products.html">Vegetables</a></li>
-          <li><a href="products.html">Fruits</a></li>
-          <li><a href="products.html">Grains & Pulses</a></li>
-          <li><a href="products.html">Herbs & Spices</a></li>
-          <li><a href="products.html">Dairy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="#">📍 Green Valley Farm, Coorg, Karnataka</a></li>
-          <li><a href="tel:+918012345678">📞 +91 80 1234 5678</a></li>
-          <li><a href="mailto:hello@greenroots.in">✉️ hello@greenroots.in</a></li>
-          <li><a href="#">⏰ Mon–Sat: 8AM – 7PM</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 GreenRoots Organic Farm. All rights reserved.</span>
-      <span>Made with 🌿 for a healthier planet</span>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js"></script>
+<script src="js/template.js"></script>
 </body>
 </html>

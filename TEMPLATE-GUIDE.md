@@ -107,11 +107,12 @@ The menu in `template.js` includes all pages and links:
 const headerTemplate = `...
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
-  <a href="products.html">Products</a>
+  <a href="contact.html">Contact</a>
   ...
 `;
 ```
 
+The menu has dropdown sections: Farm Setup, Crops, Dairy Farm, Land & Water.
 To add your new page to the menu:
 1. Open `js/template.js`
 2. Find the `headerTemplate` section
@@ -227,13 +228,12 @@ The active link is determined by the current page filename. If the link doesn't 
 ```
 organic-farming/
 ├── js/
-│   ├── main.js                    # Page-specific scripts
 │   └── template.js                # Header/Footer template
 ├── css/
 │   └── style.css                  # All styles
 ├── index.html                     # Home page
 ├── about.html                     # About page
-├── products.html                  # Products page
+├── contact.html                   # Contact page
 ├── template-page-example.html     # Use as template for new pages
 └── TEMPLATE-GUIDE.md              # This file
 ```
