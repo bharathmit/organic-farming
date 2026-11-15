@@ -61,6 +61,10 @@
     .pest-when { background: #fce4f0; border-radius: 8px; padding: 10px; margin-bottom: 0.8rem; }
     .pest-when-val { font-size: 0.9rem; color: #993556; line-height: 1.4; }
 
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-bottom: 0.8rem; }
+    .data-table th, .data-table td { border-bottom: 1px solid #eee; padding: 8px 6px; text-align: left; vertical-align: top; }
+    .data-table th { background: #f5f5f5; font-weight: 600; color: #555; }
+
     @media(max-width: 768px) {
       main { margin-top: 80px; padding: 1rem 0; }
       .row2, .row3 { grid-template-columns: 1fr; }
@@ -83,6 +87,7 @@
   <div class="tab" onclick="show('bio',this)"><span class="lang-en">🦠 Bio-fertilizers <span style="font-size:0.85em; opacity:0.8;">(4)</span></span><span class="lang-ta">🦠 உயிர் உரங்கள் <span style="font-size:0.85em; opacity:0.8;">(4)</span></span></div>
   <div class="tab" onclick="show('pest',this)"><span class="lang-en">🛡️ Pest control <span style="font-size:0.85em; opacity:0.8;">(7)</span></span><span class="lang-ta">🛡️ பூச்சி கட்டுப்பாடு <span style="font-size:0.85em; opacity:0.8;">(7)</span></span></div>
   <div class="tab" onclick="show('raw',this)"><span class="lang-en">📦 Raw materials</span><span class="lang-ta">📦 மூலப்பொருட்கள்</span></div>
+  <div class="tab" onclick="show('biogas',this)"><span class="lang-en">🔥 Biogas &amp; slurry</span><span class="lang-ta">🔥 உயிர் வாயு &amp; கழிவு</span></div>
 </div>
 
 <div class="section-title"><span class="lang-en">Primary liquid fertilizers — apply via irrigation or spray</span><span class="lang-ta">முதன்மை திரவ உரங்கள் — சாக்கடை அல்லது தெளிப்பு மூலம் பயன்படுத்தவும்</span></div>
@@ -245,6 +250,7 @@
   <div class="tab" onclick="show('bio',this)"><span class="lang-en">🦠 Bio-fertilizers</span><span class="lang-ta">🦠 உயிர் உரங்கள்</span></div>
   <div class="tab" onclick="show('pest',this)"><span class="lang-en">🛡️ Pest control</span><span class="lang-ta">🛡️ பூச்சி கட்டுப்பாடு</span></div>
   <div class="tab" onclick="show('raw',this)"><span class="lang-en">📦 Raw materials list</span><span class="lang-ta">📦 மூலப்பொருட்களின் பட்டியல்</span></div>
+  <div class="tab" onclick="show('biogas',this)"><span class="lang-en">🔥 Biogas &amp; slurry</span><span class="lang-ta">🔥 உயிர் வாயு &amp; கழிவு</span></div>
 </div>
 
 <div class="section-title"><span class="lang-en">Secondary and micro-nutrients — often missing in organic systems, cause hidden yield loss</span><span class="lang-ta">இரண்டாம் மற்றும் நுண்ணுட்டச்சத்து - பெரும்பாலும் கரிம அமைப்பில் காணப்படாது, மறைக்கப்பட்ட விளை இழப்பு ஏற்படுகிறது</span></div>
@@ -296,6 +302,7 @@
   <div class="tab active" onclick="show('bio',this)"><span class="lang-en">🦠 Bio-fertilizers</span><span class="lang-ta">🦠 உயிர் உரங்கள்</span></div>
   <div class="tab" onclick="show('pest',this)"><span class="lang-en">🛡️ Pest control</span><span class="lang-ta">🛡️ பூச்சி கட்டுப்பாடு</span></div>
   <div class="tab" onclick="show('raw',this)"><span class="lang-en">📦 Raw materials list</span><span class="lang-ta">📦 மூலப்பொருட்களின் பட்டியல்</span></div>
+  <div class="tab" onclick="show('biogas',this)"><span class="lang-en">🔥 Biogas &amp; slurry</span><span class="lang-ta">🔥 உயிர் வாயு &amp; கழிவு</span></div>
 </div>
 
 <div class="section-title"><span class="lang-en">Bio-fertilizers — live microbial cultures that work in your soil</span><span class="lang-ta">உயிர் உரங்கள் — உங்கள் மண்ணில் செயல்படும் உயிரணு வளர்ப்பு</span></div>
@@ -362,6 +369,7 @@
   <div class="tab" onclick="show('bio',this)"><span class="lang-en">🦠 Bio-fertilizers</span><span class="lang-ta">🦠 உயிர் உரங்கள்</span></div>
   <div class="tab active" onclick="show('pest',this)"><span class="lang-en">🛡️ Pest control</span><span class="lang-ta">🛡️ பூச்சி கட்டுப்பாடு</span></div>
   <div class="tab" onclick="show('raw',this)"><span class="lang-en">📦 Raw materials list</span><span class="lang-ta">📦 மூலப்பொருட்களின் பட்டியல்</span></div>
+  <div class="tab" onclick="show('biogas',this)"><span class="lang-en">🔥 Biogas &amp; slurry</span><span class="lang-ta">🔥 உயிர் வாயு &amp; கழிவு</span></div>
 </div>
 
 <div class="section-title"><span class="lang-en">Organic pest and disease control — by target pest</span><span class="lang-ta">இயற்கை பூச்சி மற்றும் நோய் கட்டுப்பாடு - இலக்ష்ய பூச்சி மூலம்</span></div>
@@ -484,6 +492,7 @@
   <div class="tab" onclick="show('bio',this)"><span class="lang-en">🦠 Bio-fertilizers</span><span class="lang-ta">🦠 உயிர் உரங்கள்</span></div>
   <div class="tab" onclick="show('pest',this)"><span class="lang-en">🛡️ Pest control</span><span class="lang-ta">🛡️ பூச்சி கட்டுப்பாடு</span></div>
   <div class="tab active" onclick="show('raw',this)"><span class="lang-en">📦 Raw materials list</span><span class="lang-ta">📦 மூலப்பொருட்களின் பட்டியல்</span></div>
+  <div class="tab" onclick="show('biogas',this)"><span class="lang-en">🔥 Biogas &amp; slurry</span><span class="lang-ta">🔥 உயிர் வாயு &amp; கழிவு</span></div>
 </div>
 
 <div class="section-title"><span class="lang-en">Complete raw materials — what to stock before the season</span><span class="lang-ta">முழு மூலப்பொருட்கள் — பருவத்திற்கு முன் என்ன கையிலெடுக்க வேண்டும்</span></div>
@@ -555,6 +564,123 @@
   </div>
 </div>
 
+</div><!-- /raw -->
+
+<div id="biogas" style="display:none">
+
+<div class="tab-row">
+  <div class="tab" onclick="show('nutrition',this)"><span class="lang-en">🌿 Nutrition</span><span class="lang-ta">🌿 ஊட்டச்சத்து</span></div>
+  <div class="tab" onclick="show('micro',this)"><span class="lang-en">⚗️ Micro-nutrients</span><span class="lang-ta">⚗️ நுண்ணுட்டச்சத்து</span></div>
+  <div class="tab" onclick="show('bio',this)"><span class="lang-en">🦠 Bio-fertilizers</span><span class="lang-ta">🦠 உயிர் உரங்கள்</span></div>
+  <div class="tab" onclick="show('pest',this)"><span class="lang-en">🛡️ Pest control</span><span class="lang-ta">🛡️ பூச்சி கட்டுப்பாடு</span></div>
+  <div class="tab" onclick="show('raw',this)"><span class="lang-en">📦 Raw materials list</span><span class="lang-ta">📦 மூலப்பொருட்களின் பட்டியல்</span></div>
+  <div class="tab active" onclick="show('biogas',this)"><span class="lang-en">🔥 Biogas &amp; slurry</span><span class="lang-ta">🔥 உயிர் வாயு &amp; கழிவு</span></div>
+</div>
+
+<p class="sub"><span class="lang-en">Fixed-dome (Deenbandhu type) biogas plant for 100 kg cow dung a day, 50,000 L slurry storage, and slurry use in paddy. All figures are planning estimates — confirm the final drawing with a local biogas mason.</span><span class="lang-ta">தினமும் 100 கிலோ மாட்டுச் சாணத்திற்கான நிலையான குவிமாட (தீனபந்து வகை) உயிர் வாயு கலன், 50,000 லி கழிவு சேமிப்பு, நெல் வயலில் கழிவுப் பயன்பாடு. அனைத்து எண்களும் திட்டமிடல் மதிப்பீடுகள் — இறுதி வரைபடத்தை உள்ளூர் உயிர் வாயு கொத்தனாருடன் உறுதி செய்யவும்.</span></p>
+
+  <!-- 1. INPUT / OUTPUT SUMMARY -->
+  <div class="section-title"><span class="lang-en">1. Daily input &amp; output</span><span class="lang-ta">1. தினசரி உள்ளீடு &amp; வெளியீடு</span></div>
+  <div class="card">
+    <div class="card-head"><div class="card-name"><span class="lang-en">Input → Output</span><span class="lang-ta">உள்ளீடு → வெளியீடு</span></div><span class="badge b-green"><span class="lang-en">₹0 — own farm</span><span class="lang-ta">₹0 — சொந்த பண்ணை</span></span></div>
+    <table class="data-table">
+      <tr><th><span class="lang-en">Item</span><span class="lang-ta">பொருள்</span></th><th><span class="lang-en">Per day</span><span class="lang-ta">தினமும்</span></th><th><span class="lang-en">Per year</span><span class="lang-ta">ஆண்டுக்கு</span></th></tr>
+      <tr><td><span class="lang-en">Fresh cow dung (input)</span><span class="lang-ta">புதிய மாட்டுச் சாணம் (உள்ளீடு)</span></td><td>100 kg</td><td>36.5 t</td></tr>
+      <tr><td><span class="lang-en">Water (1:1 mix)</span><span class="lang-ta">தண்ணீர் (1:1 கலவை)</span></td><td>100 L</td><td>36,500 L</td></tr>
+      <tr><td><span class="lang-en">Biogas (output)</span><span class="lang-ta">உயிர் வாயு (வெளியீடு)</span></td><td>3.5–4 m³</td><td>~1,350 m³</td></tr>
+      <tr><td><span class="lang-en">LPG equivalent</span><span class="lang-ta">LPG சமமானது</span></td><td>~1.5–1.7 kg</td><td>~580 kg (~40 cylinders)</td></tr>
+      <tr><td><span class="lang-en">Digested slurry (output)</span><span class="lang-ta">செரித்த கழிவு (வெளியீடு)</span></td><td>~200 L</td><td>~73,000 L</td></tr>
+      <tr><td><span class="lang-en">Usable nitrogen in slurry</span><span class="lang-ta">கழிவில் பயன்படும் நைட்ரஜன்</span></td><td>~0.2 kg</td><td>~60–70 kg</td></tr>
+    </table>
+    <div class="why-box"><div class="why-val">
+      <span class="lang-en">Basis: 1 kg fresh dung ≈ 0.036–0.04 m³ biogas; 1 m³ biogas ≈ 0.43 kg LPG ≈ 11 MJ usable heat after burner losses. Slurry ~8% solids with ~1.5% N, 1% P, 1% K on dry basis (estimated values).</span>
+      <span class="lang-ta">அடிப்படை: 1 கிலோ சாணம் ≈ 0.036–0.04 m³ வாயு; 1 m³ வாயு ≈ 0.43 கிலோ LPG ≈ அடுப்பு இழப்புக்குப் பின் 11 MJ வெப்பம். கழிவு ~8% திடப்பொருள், உலர் அடிப்படையில் ~1.5% N, 1% P, 1% K (மதிப்பீடு).</span>
+    </div></div>
+  </div>
+
+  <!-- 2. BIOGAS PLANT -->
+  <div class="section-title"><span class="lang-en">2. Fixed-dome biogas plant (4 m³/day)</span><span class="lang-ta">2. நிலையான குவிமாட உயிர் வாயு கலன் (4 m³/நாள்)</span></div>
+  <div class="card">
+    <div class="card-head"><div class="card-name"><span class="lang-en">Plant size &amp; dimensions</span><span class="lang-ta">கலன் அளவு &amp; பரிமாணங்கள்</span></div><span class="badge b-blue"><span class="lang-en">~24 m² land</span><span class="lang-ta">~24 m² நிலம்</span></span></div>
+    <div class="row2">
+      <div class="info-box"><div class="info-lbl"><span class="lang-en">Daily feed</span><span class="lang-ta">தினசரி ஊட்டம்</span></div><div class="info-val"><span class="lang-en">100 kg dung + 100 L water = 200 L slurry</span><span class="lang-ta">100 கிலோ சாணம் + 100 லி தண்ணீர் = 200 லி கழிவு</span></div></div>
+      <div class="info-box"><div class="info-lbl"><span class="lang-en">Retention time</span><span class="lang-ta">தங்கும் காலம்</span></div><div class="info-val"><span class="lang-en">~40 days → ~8 m³ slurry + gas space ≈ 10 m³ total</span><span class="lang-ta">~40 நாட்கள் → ~8 m³ கழிவு + வாயு இடம் ≈ மொத்தம் 10 m³</span></div></div>
+    </div>
+    <table class="data-table">
+      <tr><th><span class="lang-en">Part</span><span class="lang-ta">பகுதி</span></th><th><span class="lang-en">Approx. size</span><span class="lang-ta">தோராய அளவு</span></th></tr>
+      <tr><td><span class="lang-en">Digester (dome)</span><span class="lang-ta">செரிமானக் கலன் (குவிமாடம்)</span></td><td><span class="lang-en">3.3–3.4 m inner diameter, ~2.2 m deep, mostly underground</span><span class="lang-ta">உள் விட்டம் 3.3–3.4 மீ, ஆழம் ~2.2 மீ, பெரும்பாலும் நிலத்தடியில்</span></td></tr>
+      <tr><td><span class="lang-en">Inlet mixing tank</span><span class="lang-ta">உள்ளீட்டு கலக்கும் தொட்டி</span></td><td>0.6 × 0.6 × 0.6 m</td></tr>
+      <tr><td><span class="lang-en">Outlet chamber</span><span class="lang-ta">வெளியேற்ற அறை</span></td><td>~1.5 × 1.5 × 1.0 m</td></tr>
+      <tr><td><span class="lang-en">Footprint with walkway</span><span class="lang-ta">நடைபாதையுடன் இடம்</span></td><td>~6 × 4 m (24 m²)</td></tr>
+    </table>
+    <div class="steps-box">
+      <div class="info-lbl" style="color:#854F0B;margin-bottom:5px"><span class="lang-en">Construction &amp; operation</span><span class="lang-ta">கட்டுமானம் &amp; இயக்கம்</span></div>
+      <div class="step"><div class="step-n">1</div><div class="step-t"><span class="lang-en">Choose a sunny, slightly raised spot near the cattle shed and kitchen/processing room; keep 10–15 m from any well or borewell.</span><span class="lang-ta">மாட்டுக் கொட்டகை மற்றும் சமையல்/பதப்படுத்தும் அறைக்கு அருகில், வெயில் படும் சற்று உயரமான இடம்; கிணறு/ஆழ்துளைக் கிணற்றிலிருந்து 10–15 மீ தூரம்.</span></div></div>
+      <div class="step"><div class="step-n">2</div><div class="step-t"><span class="lang-en">Build the brick dome digester with inlet and outlet chambers; plaster inside with waterproof cement to make it gas-tight.</span><span class="lang-ta">செங்கல் குவிமாடக் கலனையும் உள்ளீடு, வெளியேற்ற அறைகளையும் கட்டவும்; வாயு கசியாமல் இருக்க உள்ளே நீர்ப்புகா சிமெண்ட் பூச்சு.</span></div></div>
+      <div class="step"><div class="step-n">3</div><div class="step-t"><span class="lang-en">First filling: ~8 m³ dung–water slurry; gas starts in ~2–3 weeks. Then feed 100 kg dung + 100 L water every day.</span><span class="lang-ta">முதல் நிரப்பல்: ~8 m³ சாணக் கலவை; 2–3 வாரத்தில் வாயு வரும். பின்னர் தினமும் 100 கிலோ சாணம் + 100 லி தண்ணீர்.</span></div></div>
+      <div class="step"><div class="step-n">4</div><div class="step-t"><span class="lang-en">Fit an H₂S scrubber (iron filings) and a moisture trap on the gas line to protect burners and steel vessels.</span><span class="lang-ta">அடுப்பு மற்றும் எஃகுப் பாத்திரங்களைப் பாதுகாக்க வாயுக் குழாயில் H₂S வடிகட்டி (இரும்புத் தூள்) மற்றும் ஈரப்பொறி பொருத்தவும்.</span></div></div>
+    </div>
+  </div>
+
+  <!-- 3. GAS OUTPUT -->
+  <div class="section-title"><span class="lang-en">3. Gas you get — and what it can do</span><span class="lang-ta">3. கிடைக்கும் வாயு — அதன் பயன் அளவு</span></div>
+  <div class="card">
+    <div class="card-head"><div class="card-name"><span class="lang-en">Daily gas from 100 kg dung</span><span class="lang-ta">100 கிலோ சாணத்திலிருந்து தினசரி வாயு</span></div><span class="badge b-amber">3.5–4 m³</span></div>
+    <div class="row2">
+      <div class="info-box"><div class="info-lbl"><span class="lang-en">Gas per day</span><span class="lang-ta">தினசரி வாயு</span></div><div class="info-val"><span class="lang-en">3.5–4 m³ ≈ 1.5–1.7 kg LPG (≈ 3.5 domestic cylinders a month)</span><span class="lang-ta">3.5–4 m³ ≈ 1.5–1.7 கிலோ LPG (மாதம் ≈ 3.5 வீட்டு சிலிண்டர்கள்)</span></div></div>
+      <div class="info-box"><div class="info-lbl"><span class="lang-en">Usable heat</span><span class="lang-ta">பயன்படும் வெப்பம்</span></div><div class="info-val"><span class="lang-en">~40–44 MJ a day; the dome stores about one day's gas</span><span class="lang-ta">தினமும் ~40–44 MJ; குவிமாடம் சுமார் ஒரு நாள் வாயுவை சேமிக்கும்</span></div></div>
+    </div>
+    <table class="data-table">
+      <tr><th><span class="lang-en">Example use</span><span class="lang-ta">எடுத்துக்காட்டு பயன்பாடு</span></th><th><span class="lang-en">Gas needed</span><span class="lang-ta">தேவையான வாயு</span></th><th><span class="lang-en">One day's gas is enough for</span><span class="lang-ta">ஒரு நாள் வாயு போதுமானது</span></th></tr>
+      <tr><td><span class="lang-en">Paneer — heat 100 L milk to 90°C</span><span class="lang-ta">பனீர் — 100 லி பாலை 90°C வரை சூடாக்குதல்</span></td><td>~2.5 m³</td><td><span class="lang-en">~150 L milk (≈ 25 kg paneer)</span><span class="lang-ta">~150 லி பால் (≈ 25 கிலோ பனீர்)</span></td></tr>
+      <tr><td><span class="lang-en">Ghee — melt 10 kg butter (→ ~8 kg ghee)</span><span class="lang-ta">நெய் — 10 கிலோ வெண்ணெய் உருக்குதல் (→ ~8 கிலோ நெய்)</span></td><td>~1.3 m³</td><td><span class="lang-en">~30 kg butter (≈ 24 kg ghee)</span><span class="lang-ta">~30 கிலோ வெண்ணெய் (≈ 24 கிலோ நெய்)</span></td></tr>
+      <tr><td><span class="lang-en">Boiling milk — 100 L (home use or curd)</span><span class="lang-ta">பால் காய்ச்சுதல் — 100 லி (வீடு அல்லது தயிர்)</span></td><td>~2.5 m³</td><td><span class="lang-en">~150 L milk</span><span class="lang-ta">~150 லி பால்</span></td></tr>
+    </table>
+    <div class="warn-box"><div class="warn-val">
+      <span class="lang-en">Make ghee from butter, not straight from cream — boiling off the cream's water needs about 4× more gas.</span>
+      <span class="lang-ta">நெய்யை நேரடியாக பாலாடையிலிருந்து அல்ல, வெண்ணெயிலிருந்து தயாரிக்கவும் — பாலாடையின் நீரை ஆவியாக்க சுமார் 4 மடங்கு அதிக வாயு தேவை.</span>
+    </div></div>
+  </div>
+
+  <!-- 4. SLURRY STORAGE -->
+  <div class="section-title"><span class="lang-en">4. Slurry storage — 50,000 L</span><span class="lang-ta">4. கழிவு சேமிப்பு — 50,000 லிட்டர்</span></div>
+  <div class="card">
+    <div class="card-head"><div class="card-name"><span class="lang-en">Two-pit storage (≈250 days of slurry)</span><span class="lang-ta">இரண்டு குழி சேமிப்பு (≈250 நாள் கழிவு)</span></div><span class="badge b-blue"><span class="lang-en">~72 m² land</span><span class="lang-ta">~72 m² நிலம்</span></span></div>
+    <div class="row2">
+      <div class="info-box"><div class="info-lbl"><span class="lang-en">Each pit</span><span class="lang-ta">ஒவ்வொரு குழி</span></div><div class="info-val"><span class="lang-en">5 m × 4 m × 1.5 m deep — 25 m³ at 1.25 m fill (0.25 m freeboard)</span><span class="lang-ta">5 மீ × 4 மீ × 1.5 மீ ஆழம் — 1.25 மீ நிரப்பில் 25 m³ (0.25 மீ மேல் இடைவெளி)</span></div></div>
+      <div class="info-box"><div class="info-lbl"><span class="lang-en">Total land (plant + pits)</span><span class="lang-ta">மொத்த நிலம் (கலன் + குழிகள்)</span></div><div class="info-val"><span class="lang-en">~100–120 m² ≈ 3 cents</span><span class="lang-ta">~100–120 m² ≈ 3 சென்ட்</span></div></div>
+    </div>
+    <div class="steps-box">
+      <div class="info-lbl" style="color:#854F0B;margin-bottom:5px"><span class="lang-en">How to store</span><span class="lang-ta">எப்படி சேமிப்பது</span></div>
+      <div class="step"><div class="step-n">1</div><div class="step-t"><span class="lang-en">Line pits with brick + cement plaster or HDPE sheet (≥500 micron); slope the floor to one corner for pumping.</span><span class="lang-ta">குழிகளை செங்கல் + சிமெண்ட் பூச்சு அல்லது HDPE தாள் (≥500 மைக்ரான்) கொண்டு அமைக்கவும்; பம்ப் செய்ய தரையை ஒரு மூலைக்கு சரிவாக.</span></div></div>
+      <div class="step"><div class="step-n">2</div><div class="step-t"><span class="lang-en">Gravity-flow channel from the outlet chamber to the pits.</span><span class="lang-ta">வெளியேற்ற அறையிலிருந்து குழிகளுக்கு புவியீர்ப்பு ஓட்டக் கால்வாய்.</span></div></div>
+      <div class="step"><div class="step-n">3</div><div class="step-t"><span class="lang-en">Fill one pit while the other is emptied to the fields.</span><span class="lang-ta">ஒரு குழியை நிரப்பும்போது மற்றொன்றை வயலுக்கு காலி செய்யவும்.</span></div></div>
+      <div class="step"><div class="step-n">4</div><div class="step-t"><span class="lang-en">Simple sheet roof or shade net — keeps rain out and reduces nitrogen loss. Stir before pumping.</span><span class="lang-ta">எளிய தகடு கூரை அல்லது நிழல் வலை — மழைநீர் வராமலும், நைட்ரஜன் இழப்பு குறையவும். பம்ப் செய்யும் முன் கலக்கவும்.</span></div></div>
+    </div>
+  </div>
+
+  <!-- 5. PADDY USE -->
+  <div class="section-title"><span class="lang-en">5. Slurry in paddy fields</span><span class="lang-ta">5. நெல் வயலில் கழிவுப் பயன்பாடு</span></div>
+  <div class="card">
+    <div class="card-head"><div class="card-name"><span class="lang-en">Acre coverage</span><span class="lang-ta">ஏக்கர் அளவு</span></div><span class="badge b-green"><span class="lang-en">2.5–5 acres / season</span><span class="lang-ta">2.5–5 ஏக்கர் / பருவம்</span></span></div>
+    <table class="data-table">
+      <tr><th><span class="lang-en">Use</span><span class="lang-ta">பயன்பாடு</span></th><th><span class="lang-en">Dose per acre</span><span class="lang-ta">ஏக்கருக்கு அளவு</span></th><th><span class="lang-en">50,000 L covers</span><span class="lang-ta">50,000 லி போதுமானது</span></th></tr>
+      <tr><td><span class="lang-en">Basal (strong)</span><span class="lang-ta">அடியுரம் (அதிக அளவு)</span></td><td>~20,000 L</td><td><span class="lang-en">~2.5 acres</span><span class="lang-ta">~2.5 ஏக்கர்</span></td></tr>
+      <tr><td><span class="lang-en">Top-up via irrigation</span><span class="lang-ta">பாசன நீருடன் மேலுரம்</span></td><td>~10,000 L</td><td><span class="lang-en">~5 acres</span><span class="lang-ta">~5 ஏக்கர்</span></td></tr>
+    </table>
+    <div class="steps-box">
+      <div class="info-lbl" style="color:#854F0B;margin-bottom:5px"><span class="lang-en">When &amp; how to apply</span><span class="lang-ta">எப்போது &amp; எப்படி இடுவது</span></div>
+      <div class="step"><div class="step-n">1</div><div class="step-t"><span class="lang-en">Basal: spread in standing water before the final puddling, then puddle it in.</span><span class="lang-ta">அடியுரம்: கடைசி சேற்றுழவுக்கு முன் தேங்கிய நீரில் பரப்பி, சேற்றுழவு செய்யவும்.</span></div></div>
+      <div class="step"><div class="step-n">2</div><div class="step-t"><span class="lang-en">Top-up: let it flow with irrigation water at the field inlet at tillering (Day 25–30) and panicle initiation (Day 45–50).</span><span class="lang-ta">மேலுரம்: தூர் கட்டும் பருவம் (நாள் 25–30) மற்றும் கதிர் உருவாகும் பருவத்தில் (நாள் 45–50) வயல் மடையில் பாசன நீருடன் விடவும்.</span></div></div>
+      <div class="step"><div class="step-n">3</div><div class="step-t"><span class="lang-en">Do not drain the field for 3–4 days after applying — nutrients will run off.</span><span class="lang-ta">இட்ட பின் 3–4 நாட்கள் வயல் நீரை வடிக்க வேண்டாம் — சத்துக்கள் வெளியேறும்.</span></div></div>
+    </div>
+    <div class="why-box"><div class="why-val">
+      <span class="lang-en">Organic paddy needs ~45–50 kg N per acre per crop. One year's slurry (~60–70 kg usable N) fully feeds only ~1.5 acres a season, so use it with daincha green manure, azolla, jeevamirtham and slurry–straw compost for the rest of the 10 acres. To cover more land, buy dung from milk suppliers or dry the slurry with paddy straw into compost.</span>
+      <span class="lang-ta">இயற்கை நெல்லுக்கு ஏக்கருக்கு ஒரு பயிருக்கு ~45–50 கிலோ N தேவை. ஒரு ஆண்டுக் கழிவு (~60–70 கிலோ N) ஒரு பருவத்தில் ~1.5 ஏக்கருக்கு மட்டுமே முழுமையாகப் போதும்; எனவே மீத 10 ஏக்கருக்கு தக்கைப்பூண்டு பசுந்தாள் உரம், அசோலா, ஜீவாமிர்தம், கழிவு–வைக்கோல் உரத்துடன் சேர்த்துப் பயன்படுத்தவும்.</span>
+    </div></div>
+  </div>
+
+</div>
 
 </main>
 
@@ -562,7 +688,7 @@
 <script>
 function show(tab, el) {
   // Hide all sections
-  ['nutrition','micro','bio','pest','raw'].forEach(t => document.getElementById(t).style.display = 'none');
+  ['nutrition','micro','bio','pest','raw','biogas'].forEach(t => document.getElementById(t).style.display = 'none');
 
   // Show the selected section
   document.getElementById(tab).style.display = 'block';
