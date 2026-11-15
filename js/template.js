@@ -21,6 +21,17 @@ const headerTemplate = `
           </div>
         </li>
         <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle"><span class="lang-en">Organic Conversion</span><span class="lang-ta">இயற்கைக்கு மாற்றம்</span></a>
+          <div class="dropdown-menu">
+            <a href="conversion-roadmap.html"><span class="menu-icon">🧭</span><span><span class="lang-en">Conversion roadmap (3 years)</span><span class="lang-ta">மாற்றத் திட்டம் (3 ஆண்டுகள்)</span></span></a>
+            <a href="soil-health-recovery.html"><span class="menu-icon">🧪</span><span><span class="lang-en">Soil testing & soil health recovery</span><span class="lang-ta">மண் பரிசோதனை & மண் வள மீட்பு</span></span></a>
+            <a href="chemical-to-organic-inputs.html"><span class="menu-icon">♻️</span><span><span class="lang-en">Replacing chemical fertilizers & pesticides</span><span class="lang-ta">ரசாயன உரம் & பூச்சிக்கொல்லி மாற்றீடு</span></span></a>
+            <a href="transition-economics.html"><span class="menu-icon">📉</span><span><span class="lang-en">Yield & income during transition</span><span class="lang-ta">மாற்றக் காலத்தில் மகசூல் & வருமானம்</span></span></a>
+            <a href="organic-certification.html"><span class="menu-icon">📜</span><span><span class="lang-en">Organic certification (NPOP / PGS-India)</span><span class="lang-ta">இயற்கைச் சான்றிதழ் (NPOP / PGS-India)</span></span></a>
+            <a href="organic-schemes.html"><span class="menu-icon">🏛️</span><span><span class="lang-en">Government schemes & subsidies</span><span class="lang-ta">அரசுத் திட்டங்கள் & மானியங்கள்</span></span></a>
+          </div>
+        </li>
+        <li class="has-dropdown">
           <a href="#" class="dropdown-toggle"><span class="lang-en">Crops</span><span class="lang-ta">பயிர்கள்</span></a>
           <div class="dropdown-menu">
             <a href="complete-inputs-guide-new.html"><span class="menu-icon">🌱</span><span><span class="lang-en">Organic paddy inputs</span><span class="lang-ta">இயற்கை நெல் உள்ளீடுகள்</span></span></a>
