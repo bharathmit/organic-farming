@@ -581,7 +581,7 @@ img { max-width: 100%; display: block; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.6fr repeat(5, 1fr);
+  grid-template-columns: 2fr 1fr;
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -745,6 +745,15 @@ body:not(.tamil) .nav-links a span.lang-en, body.tamil .nav-links a span.lang-ta
   transition: var(--transition);
   z-index: 200;
   border-top: 3px solid var(--green-dark);
+}
+
+/* invisible bridge so the menu stays open while the mouse crosses the gap */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: -14px;
+  height: 14px;
 }
 
 .has-dropdown:hover .dropdown-menu,
