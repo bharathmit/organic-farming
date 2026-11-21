@@ -32,6 +32,18 @@ const headerTemplate = `
           </div>
         </li>
         <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle"><span class="lang-en">Organic Fertiliser</span><span class="lang-ta">இயற்கை உரம்</span></a>
+          <div class="dropdown-menu">
+            <a href="organic-fertilizer.html"><span class="menu-icon">📘</span><span><span class="lang-en">Overview: organic vs chemical</span><span class="lang-ta">கண்ணோட்டம்: இயற்கை vs ரசாயனம்</span></span></a>
+            <a href="fertilizer-compost-vermicompost.html"><span class="menu-icon">🪱</span><span><span class="lang-en">Compost & vermicompost</span><span class="lang-ta">மட்கு உரம் & மண்புழு உரம்</span></span></a>
+            <a href="fertilizer-animal-manure.html"><span class="menu-icon">🐄</span><span><span class="lang-en">Animal manure & byproducts</span><span class="lang-ta">கால்நடை எரு & துணைப் பொருட்கள்</span></span></a>
+            <a href="fertilizer-plant-based.html"><span class="menu-icon">🌾</span><span><span class="lang-en">Plant-based meals & extracts</span><span class="lang-ta">தாவரத் தூள்கள் & சாறுகள்</span></span></a>
+            <a href="fertilizer-green-manure.html"><span class="menu-icon">🌿</span><span><span class="lang-en">Green manure</span><span class="lang-ta">பசுந்தாள் உரம்</span></span></a>
+            <a href="fertilizer-mineral.html"><span class="menu-icon">🪨</span><span><span class="lang-en">Mineral-based fertilizers</span><span class="lang-ta">கனிம அடிப்படை உரங்கள்</span></span></a>
+            <a href="fertilizer-biofertilizers.html"><span class="menu-icon">🦠</span><span><span class="lang-en">Biofertilizers</span><span class="lang-ta">உயிர் உரங்கள்</span></span></a>
+          </div>
+        </li>
+        <li class="has-dropdown">
           <a href="#" class="dropdown-toggle"><span class="lang-en">Crops</span><span class="lang-ta">பயிர்கள்</span></a>
           <div class="dropdown-menu">
             <a href="complete-inputs-guide-new.html"><span class="menu-icon">🌱</span><span><span class="lang-en">Organic paddy inputs</span><span class="lang-ta">இயற்கை நெல் உள்ளீடுகள்</span></span></a>
