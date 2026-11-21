@@ -47,8 +47,6 @@ const headerTemplate = `
           <div class="dropdown-menu">
             <a href="complete-inputs-guide-new.html"><span class="menu-icon">🌱</span><span><span class="lang-en">Organic paddy inputs</span><span class="lang-ta">இயற்கை நெல் உள்ளீடுகள்</span></span></a>
             <a href="organic-pest-control.html"><span class="menu-icon">🐛</span><span><span class="lang-en">Organic pest control</span><span class="lang-ta">இயற்கை பூச்சி மேலாண்மை</span></span></a>
-            <a href="crop-calendar.html"><span class="menu-icon">📅</span><span><span class="lang-en">Crop calendar</span><span class="lang-ta">பயிர் நாட்காட்டி</span></span></a>
-            <a href="green-manure-fodder.html"><span class="menu-icon">🌿</span><span><span class="lang-en">Green manure & fodder crops</span><span class="lang-ta">பசுந்தாள் உரம் & தீவனப் பயிர்கள்</span></span></a>
           </div>
         </li>
         <li class="has-dropdown">
