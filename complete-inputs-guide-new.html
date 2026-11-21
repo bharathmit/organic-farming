@@ -61,6 +61,14 @@
     .pest-when { background: #fce4f0; border-radius: 8px; padding: 10px; margin-bottom: 0.8rem; }
     .pest-when-val { font-size: 0.9rem; color: #993556; line-height: 1.4; }
 
+    .npk-wrap { overflow-x: auto; }
+    .npk-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 560px; }
+    .npk-table th { background: #1D9E75; color: #fff; text-align: left; padding: 8px; font-weight: 600; }
+    .npk-table td { border-bottom: 1px solid #eee; padding: 8px; vertical-align: top; color: #333; line-height: 1.4; }
+    .npk-table td:nth-child(n+3), .npk-table th:nth-child(n+3) { text-align: center; white-space: nowrap; }
+    .npk-table tr.npk-total td { background: #e8f5e9; font-weight: 600; }
+    .npk-table tr.npk-need td { background: #f5f5f5; font-weight: 600; }
+
 
     @media(max-width: 768px) {
       main.container { margin-top: 80px; }
@@ -79,7 +87,7 @@
 <div id="nutrition">
 
 <div class="tab-row">
-  <div class="tab active" onclick="show('nutrition',this)"><span class="lang-en">🌿 Nutrition <span style="font-size:0.85em; opacity:0.8;">(7)</span></span><span class="lang-ta">🌿 ஊட்டச்சத்து <span style="font-size:0.85em; opacity:0.8;">(7)</span></span></div>
+  <div class="tab active" onclick="show('nutrition',this)"><span class="lang-en">🌿 Nutrition <span style="font-size:0.85em; opacity:0.8;">(10)</span></span><span class="lang-ta">🌿 ஊட்டச்சத்து <span style="font-size:0.85em; opacity:0.8;">(10)</span></span></div>
   <div class="tab" onclick="show('micro',this)"><span class="lang-en">⚗️ Micro-nutrients <span style="font-size:0.85em; opacity:0.8;">(3)</span></span><span class="lang-ta">⚗️ நுண்ணுட்டச்சத்து <span style="font-size:0.85em; opacity:0.8;">(3)</span></span></div>
   <div class="tab" onclick="show('bio',this)"><span class="lang-en">🦠 Bio-fertilizers <span style="font-size:0.85em; opacity:0.8;">(4)</span></span><span class="lang-ta">🦠 உயிர் உரங்கள் <span style="font-size:0.85em; opacity:0.8;">(4)</span></span></div>
   <div class="tab" onclick="show('pest',this)"><span class="lang-en">🛡️ Pest control <span style="font-size:0.85em; opacity:0.8;">(7)</span></span><span class="lang-ta">🛡️ பூச்சி கட்டுப்பாடு <span style="font-size:0.85em; opacity:0.8;">(7)</span></span></div>
@@ -234,6 +242,97 @@
     <div class="step"><div class="step-n">3</div><div class="step-t">Spray immediately on flag leaves; do not store — use within 2 hours</div></div>
   </div>
   <div class="tag-row"><span class="stage-tag">Panicle initiation</span><span class="stage-tag">Flag leaf stage</span></div>
+</div>
+
+<div class="section-title"><span class="lang-en">Bulk manures — the main NPK source; liquid inputs above boost their uptake</span><span class="lang-ta">மொத்த எருக்கள் — முதன்மை NPK ஆதாரம்; மேலே உள்ள திரவ உள்ளீடுகள் அவற்றின் உறிஞ்சுதலை அதிகரிக்கும்</span></div>
+
+<div class="card">
+  <div class="card-head"><div class="card-name">Vermicompost (Mannpuzhu Uram)</div><span class="badge b-green">₹0 — own farm</span></div>
+  <div class="row2">
+    <div class="info-box"><div class="info-lbl">NPK content</div><div class="info-val">N 1.2–1.5%, P₂O₅ ~0.8%, K₂O ~0.8% + Ca, Mg, micronutrients — 100 kg gives ~1.3 kg N, 0.8 kg P, 0.8 kg K</div></div>
+    <div class="info-box"><div class="info-lbl">Apply</div><div class="info-val">1.3 t/acre per season — 800 kg at basal, 300 kg at tillering (Day 20), 200 kg at panicle init (Day 45)</div></div>
+  </div>
+  <div class="ingr-box"><div class="info-lbl" style="color:#185FA5">Ingredients per bed</div>
+    <div class="ingr-list">
+      <span class="ingr-pill">Cow dung, pre-decomposed 15–20 days</span><span class="ingr-pill">Crop waste / leftover fodder / dry leaves (1 part to 3 parts dung)</span><span class="ingr-pill">Earthworms — Eudrilus eugeniae or Eisenia fetida, ~1 kg per m²</span><span class="ingr-pill">Shade + water</span>
+    </div>
+  </div>
+  <div class="steps-box">
+    <div class="info-lbl" style="color:#854F0B;margin-bottom:5px">Preparation — 60 to 75 days</div>
+    <div class="step"><div class="step-n">1</div><div class="step-t">Pile fresh dung in shade 15–20 days until it stops heating — fresh hot dung kills worms</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-t">Make beds 3 ft wide, 1–1.5 ft high, any length, under a roof: crop waste at bottom, dung mix on top</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-t">Release worms; keep moist like a squeezed sponge (~60%); cover with gunny bags</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-t">Ready when black, granular and earthy-smelling (60–75 days); stop watering 3 days before harvest</div></div>
+    <div class="step"><div class="step-n">5</div><div class="step-t">Heap in light so worms move down; collect top layer, sieve, store in shade. Reuse worms for next bed</div></div>
+  </div>
+  <div class="warn-box"><div class="info-lbl" style="color:#854F0B">How much to plan</div><div class="warn-val">About 10 t of dung + crop waste gives ~4 t vermicompost. One adult cow (~9 t dung/year) makes ~3.5 t/year — enough for about 1.3 acres for two seasons. Plan beds 3 months before the season.</div></div>
+  <div class="tag-row"><span class="stage-tag">Basal</span><span class="stage-tag">Tillering (Day 20)</span><span class="stage-tag">Panicle initiation (Day 45)</span></div>
+</div>
+
+<div class="card">
+  <div class="card-head"><div class="card-name">Green Manure — Daincha / Sunhemp (Pasundhaal Uram)</div><span class="badge b-teal">Buy seed once, then own</span></div>
+  <div class="row2">
+    <div class="info-box"><div class="info-lbl">NPK content</div><div class="info-val">8–10 t green matter/acre at 45 days holds 35–40 kg N; about 15–20 kg N becomes available to the next paddy crop. Adds organic carbon</div></div>
+    <div class="info-box"><div class="info-lbl">Apply</div><div class="info-val">Sow 20 kg seed/acre 45 days before transplanting; plough in at flowering, 7–10 days before transplanting</div></div>
+  </div>
+  <div class="ingr-box"><div class="info-lbl" style="color:#185FA5">What you need</div>
+    <div class="ingr-list">
+      <span class="ingr-pill">Daincha (Sesbania aculeata) — best for wetland</span><span class="ingr-pill">or Sunhemp (Crotalaria juncea)</span><span class="ingr-pill">20 kg seed per acre</span><span class="ingr-pill">One light irrigation</span>
+    </div>
+  </div>
+  <div class="steps-box">
+    <div class="info-lbl" style="color:#854F0B;margin-bottom:5px">Method — 45 to 55 days</div>
+    <div class="step"><div class="step-n">1</div><div class="step-t">Soak seed overnight; broadcast in moist field right after the previous harvest</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-t">Grow 40–45 days, until first flowering — nitrogen is highest at this point</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-t">Flood the field and plough / trample the plants in (cage wheel or puddler)</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-t">Keep flooded 7–10 days to decompose, then do final puddling and transplant</div></div>
+  </div>
+  <div class="warn-box"><div class="info-lbl" style="color:#854F0B">Save your own seed</div><div class="warn-val">Leave a 10-cent strip to mature and set seed each year — no seed purchase after the first season. Needs a 45-day gap between crops; with three paddy seasons a year there is no gap, so replace one season with green manure or a pulse.</div></div>
+  <div class="tag-row"><span class="stage-tag">45 days before transplanting</span><span class="stage-tag">Ploughed in before puddling</span></div>
+</div>
+
+<div class="card">
+  <div class="card-head"><div class="card-name">Biogas Slurry (Cow dung + Urine)</div><span class="badge b-green">₹0 — own farm</span></div>
+  <div class="row2">
+    <div class="info-box"><div class="info-lbl">NPK content</div><div class="info-val">Fresh liquid slurry: N 0.2–0.3%, P₂O₅ ~0.1%, K₂O ~0.2% — 2,000 L gives ~5 kg N, 2 kg P, 4 kg K. Urine raises the N and K</div></div>
+    <div class="info-box"><div class="info-lbl">Apply</div><div class="info-val">2,000 L/acre via irrigation water at basal, tillering (Day 20) and panicle init (Day 45) — 6,000 L/acre per season</div></div>
+  </div>
+  <div class="ingr-box"><div class="info-lbl" style="color:#185FA5">Feed to the biogas plant (daily)</div>
+    <div class="ingr-list">
+      <span class="ingr-pill">Fresh cow dung</span><span class="ingr-pill">Cow urine (from shed drain)</span><span class="ingr-pill">Water — dung : (urine + water) = 1 : 1</span>
+    </div>
+  </div>
+  <div class="steps-box">
+    <div class="info-lbl" style="color:#854F0B;margin-bottom:5px">How to use</div>
+    <div class="step"><div class="step-n">1</div><div class="step-t">Collect outlet slurry in a covered pit or tank; use within 7 days (open storage loses nitrogen as ammonia)</div></div>
+    <div class="step"><div class="step-n">2</div><div class="step-t">Stir before use; let it flow into the irrigation channel while the field is being flooded, so it spreads evenly</div></div>
+    <div class="step"><div class="step-n">3</div><div class="step-t">At basal, apply during final puddling. Do not pour concentrated slurry at one spot near young seedlings</div></div>
+    <div class="step"><div class="step-n">4</div><div class="step-t">Surplus slurry: dry in shade and use as vermicompost bed feed — it is already pre-decomposed</div></div>
+  </div>
+  <div class="warn-box"><div class="info-lbl" style="color:#854F0B">How much to plan</div><div class="warn-val">One adult cow gives ~25 kg dung/day → ~50 L slurry/day. That is ~6,000 L in 4 months — about one acre per season per cow. Slurry also replaces fresh cow dung slurry as a soil-microbe booster.</div></div>
+  <div class="tag-row"><span class="stage-tag">Basal</span><span class="stage-tag">Tillering (Day 20)</span><span class="stage-tag">Panicle initiation (Day 45)</span></div>
+</div>
+
+<div class="section-title"><span class="lang-en">Stage-wise NPK plan per acre — how the inputs meet the crop's need</span><span class="lang-ta">ஏக்கருக்கு பருவ வாரியான NPK திட்டம் — உள்ளீடுகள் பயிரின் தேவையை எவ்வாறு பூர்த்தி செய்கின்றன</span></div>
+
+<div class="card">
+  <div class="npk-wrap">
+  <table class="npk-table">
+    <thead><tr><th>Stage</th><th>Inputs per acre</th><th>N (kg)</th><th>P₂O₅ (kg)</th><th>K₂O (kg)</th></tr></thead>
+    <tbody>
+      <tr><td>45 days before transplanting</td><td>Green manure: Daincha 20 kg seed → 8–10 t ploughed in</td><td>15–20</td><td>–</td><td>–</td></tr>
+      <tr><td>Basal (final puddling)</td><td>Vermicompost 800 kg · Biogas slurry 2,000 L · Neem cake 100 kg · Azospirillum + PSB + Trichoderma (1 kg each in 50 kg vermicompost) · E.M drench 1:100 · Zinc sulphate 5 kg only if deficient</td><td>20</td><td>9 + 10–15 unlocked by PSB</td><td>11.4</td></tr>
+      <tr><td>Transplanting (Day 0)</td><td>Jeevamirtham 200 L · Trichoderma root dip</td><td colspan="3">Booster — not counted</td></tr>
+      <tr><td>Tillering (Day 20)</td><td>Vermicompost 300 kg · Biogas slurry 2,000 L · Wood ash 50 kg · Jeevamirtham · Panchagavyam 3% · Amirtha Karaisal · Meen Amilam · Zinc spray 0.5% if symptoms</td><td>9</td><td>4</td><td>9</td></tr>
+      <tr><td>Panicle initiation (Day 45)</td><td>Vermicompost 200 kg · Biogas slurry 2,000 L · Wood ash 50 kg · Jeevamirtham · Panchagavyam · Thengai Paal + Mor</td><td>7.5</td><td>3.5</td><td>8.5</td></tr>
+      <tr><td>Booting → grain filling</td><td>Panchagavyam + neem oil · Ash spray · Meen Amilam · E.M foliar 1:500</td><td colspan="3">Foliar support — not counted</td></tr>
+      <tr class="npk-total"><td>Total supplied</td><td></td><td>52–57</td><td>17 + PSB</td><td>~29</td></tr>
+      <tr class="npk-need"><td>Crop need (TNAU)</td><td>Most of Tamil Nadu; Cauvery delta &amp; Coimbatore tract need 60 : 20 : 20</td><td>50</td><td>16</td><td>16</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="why-box"><div class="info-lbl" style="color:#3B6D11">Season total per acre</div><div class="why-val">Daincha seed 20 kg (first season only) · Vermicompost 1.3 t · Biogas slurry 6,000 L · Neem cake 100 kg · Wood ash 100 kg. Multiply by your acreage. For 60 : 20 : 20 areas, raise vermicompost to 2 t/acre.</div></div>
+  <div class="warn-box"><div class="info-lbl" style="color:#854F0B">How to read this table</div><div class="warn-val">Only bulk inputs (green manure, vermicompost, slurry, neem cake, ash) are counted for NPK. Jeevamirtham, Panchagavyam and the amino sprays carry very little NPK themselves — they feed soil microbes and improve uptake, so they are listed but not added to the totals. Neem cake is moved to basal and half the ash to panicle initiation, when potash demand is highest.</div></div>
 </div>
 
 </div>
