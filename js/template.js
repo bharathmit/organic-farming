@@ -43,10 +43,16 @@ const headerTemplate = `
           </div>
         </li>
         <li class="has-dropdown">
-          <a href="#" class="dropdown-toggle"><span class="lang-en">Crops</span><span class="lang-ta">பயிர்கள்</span></a>
+          <a href="#" class="dropdown-toggle"><span class="lang-en">Organic Inputs Guide</span><span class="lang-ta">இயற்கை உள்ளீடு வழிகாட்டி</span></a>
           <div class="dropdown-menu">
-            <a href="complete-inputs-guide-new.html"><span class="menu-icon">🌱</span><span><span class="lang-en">Complete organic inputs for paddy</span><span class="lang-ta">நெல்லுக்கான முழு இயற்கை உள்ளீடுகள்</span></span></a>
+            <a href="complete-inputs-guide-new.html"><span class="menu-icon">🌱</span><span><span class="lang-en">Organic fertiliser &amp; pest inputs</span><span class="lang-ta">இயற்கை உரம் &amp; பூச்சி கட்டுப்பாட்டு உள்ளீடுகள்</span></span></a>
             <a href="organic-pest-control.html"><span class="menu-icon">🐛</span><span><span class="lang-en">Organic pest control</span><span class="lang-ta">இயற்கை பூச்சி மேலாண்மை</span></span></a>
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="#" class="dropdown-toggle"><span class="lang-en">Crop Season Plans</span><span class="lang-ta">பயிர் பருவத் திட்டங்கள்</span></a>
+          <div class="dropdown-menu">
+            <a href="paddy-crop-plan.html"><span class="menu-icon">🌾</span><span><span class="lang-en">Paddy season plan (stage-wise)</span><span class="lang-ta">நெல் பருவத் திட்டம் (நிலை வாரியாக)</span></span></a>
           </div>
         </li>
         <li class="has-dropdown">

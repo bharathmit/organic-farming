@@ -95,6 +95,14 @@ img { max-width: 100%; display: block; }
   transform: translateY(-1px);
 }
 
+/* Compact top menu on laptop-width screens so all menus + language switch fit */
+@media (min-width: 769px) and (max-width: 1400px) {
+  .nav-links { gap: 2px; }
+  .nav-links > li > a { padding: 8px 9px; font-size: 0.88rem; }
+  .logo { font-size: 1.3rem; }
+  .logo-icon { font-size: 1.7rem; }
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
