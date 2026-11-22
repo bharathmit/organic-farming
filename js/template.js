@@ -45,7 +45,7 @@ const headerTemplate = `
         <li class="has-dropdown">
           <a href="#" class="dropdown-toggle"><span class="lang-en">Crops</span><span class="lang-ta">பயிர்கள்</span></a>
           <div class="dropdown-menu">
-            <a href="complete-inputs-guide-new.html"><span class="menu-icon">🌱</span><span><span class="lang-en">Organic paddy inputs</span><span class="lang-ta">இயற்கை நெல் உள்ளீடுகள்</span></span></a>
+            <a href="complete-inputs-guide-new.html"><span class="menu-icon">🌱</span><span><span class="lang-en">Complete organic inputs for paddy</span><span class="lang-ta">நெல்லுக்கான முழு இயற்கை உள்ளீடுகள்</span></span></a>
             <a href="organic-pest-control.html"><span class="menu-icon">🐛</span><span><span class="lang-en">Organic pest control</span><span class="lang-ta">இயற்கை பூச்சி மேலாண்மை</span></span></a>
           </div>
         </li>
@@ -64,11 +64,11 @@ const headerTemplate = `
         </li>
         <li><a href="about.html"><span class="lang-en">About</span><span class="lang-ta">பற்றி</span></a></li>
         <li><a href="contact.html"><span class="lang-en">Contact</span><span class="lang-ta">தொடர்பு</span></a></li>
-        <li class="lang-toggle">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="ta">தமிழ்</button>
-        </li>
       </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ta">தமிழ்</button>
+      </div>
       <button class="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -81,24 +81,8 @@ const footerTemplate = `
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo" style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
-          <span style="font-size:2rem;">🌿</span>
-          <h3 style="color:white; font-size:1.5rem; margin:0;">GreenRoots</h3>
-        </div>
-        <p class="lang-en">Practical guides for integrated organic farming — crops, dairy and farm setup for sustainable living and financial freedom.</p>
-        <p class="lang-ta">ஒருங்கிணைந்த இயற்கை விவசாயத்திற்கான நடைமுறை வழிகாட்டிகள் — நிலையான வாழ்வுக்கும் நிதி சுதந்திரத்துக்கும் பயிர், பால் பண்ணை, பண்ணை அமைப்பு.</p>
-      </div>
-      <div class="footer-col">
-        <h4><span class="lang-en">Contact</span><span class="lang-ta">தொடர்பு</span></h4>
-        <p style="margin-bottom:8px;">📍 <span class="lang-en">Villupuram, Tamil Nadu</span><span class="lang-ta">விழுப்புரம், தமிழ்நாடு</span></p>
-        <p style="margin-bottom:8px;">📞 +91 98765 43210</p>
-        <p>✉️ info@greenroots.farm</p>
-      </div>
-    </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 <span class="lang-en">GreenRoots Integrated Organic Farm Guide. All rights reserved.</span><span class="lang-ta">கிரீன்ரூட்ஸ் ஒருங்கிணைந்த இயற்கை பண்ணை வழிகாட்டி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டுள்ளன.</span></p>
+      <p>&copy; 2026 <span class="lang-en">Integrated Organic Farm Guide. All rights reserved.</span><span class="lang-ta">ஒருங்கிணைந்த இயற்கை பண்ணை வழிகாட்டி. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டுள்ளன.</span></p>
     </div>
   </div>
 </footer>

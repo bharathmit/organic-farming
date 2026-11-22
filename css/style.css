@@ -676,7 +676,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-left: 8px;
+  margin-left: 16px;
+  flex-shrink: 0;
 }
 
 .lang-btn {
@@ -1321,6 +1322,8 @@ body:not(.tamil) .nav-links a span.lang-en, body.tamil .nav-links a span.lang-ta
   .nav-links a { display: block; padding: 12px 20px; width: 100%; }
 
   .hamburger { display: flex; }
+  .lang-toggle { margin-left: auto; margin-right: 12px; }
+  .lang-btn { padding: 4px 10px; }
 
   /* mobile dropdown */
   .has-dropdown .dropdown-menu {
