@@ -38,13 +38,11 @@
     .if-alloc h3 { font-size: 1.05rem; margin-bottom: 0.6rem; }
     .if-alloc table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
     .if-alloc td { padding: 6px 4px; border-bottom: 1px solid #eee; vertical-align: top; }
-    .if-alloc td:last-child { text-align: right; white-space: nowrap; font-weight: 600; color: #2d6a4f; }
-    .if-alloc tr.total td { border-bottom: none; font-weight: 700; }
     .if-note { font-size: 0.82rem; color: #777; margin-top: 0.6rem; line-height: 1.5; }
     .num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background: #2d6a4f; color: #fff; font-size: 0.8rem; font-weight: 700; margin-right: 6px; flex-shrink: 0; }
     .if-sec { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: center; background: #fff; border: 1px solid #e3e3dc; border-radius: 16px; padding: 1.2rem; margin-bottom: 1.4rem; }
     .if-sec:nth-of-type(even) .if-img { order: 2; }
-    .if-img img { width: 100%; height: auto; border-radius: 12px; display: block; }
+    .if-img img { width: 100%; aspect-ratio: 5 / 3; object-fit: cover; border-radius: 12px; display: block; background: #e8efe2; }
     .if-txt h3 { display: flex; align-items: center; font-size: 1.25rem; margin-bottom: 0.5rem; color: #1b4332; }
     .if-txt p { color: #444; line-height: 1.7; margin-bottom: 0.7rem; }
     .if-txt ul { margin: 0 0 0.7rem 1.1rem; }
@@ -56,6 +54,20 @@
     .if-flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .if-flow .step { background: #fff; border: 1px solid #cfe3c4; border-radius: 10px; padding: 8px 12px; font-size: 0.92rem; }
     .if-flow .arr { color: #2d6a4f; font-weight: 700; }
+    .dc-wrap { margin: 2.5rem 0 0; }
+    .dc-wrap h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .dc { position: relative; width: 100%; max-width: 680px; aspect-ratio: 1 / 1; margin: 0 auto; background: radial-gradient(circle at 50% 50%, #fff8e6 0, #f1f7ec 70%); border: 1px solid #e3e3dc; border-radius: 20px; }
+    .dc-arrows { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .dc-node { position: absolute; transform: translate(-50%, -50%); width: 22%; text-align: center; }
+    .dc-ico { position: relative; width: 62%; aspect-ratio: 1 / 1; margin: 0 auto 4px; border-radius: 50%; background: #fff; border: 2px solid #cfe3c4; display: flex; align-items: center; justify-content: center; font-size: clamp(1.1rem, 4.5vw, 2rem); box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+    .dc-inc { position: absolute; top: -4px; right: -4px; width: 22px; height: 22px; border-radius: 50%; background: #1f6fd1; color: #fff; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .dc-lbl { font-size: clamp(0.62rem, 2.2vw, 0.88rem); font-weight: 600; color: #7a2e1d; line-height: 1.25; }
+    .dc-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 28%; aspect-ratio: 1 / 1; border-radius: 50%; overflow: hidden; background: #d8a46a; border: 4px solid #fff; box-shadow: 0 4px 14px rgba(0,0,0,.15); display: flex; align-items: flex-end; justify-content: center; }
+    .dc-fallback { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 9vw, 4rem); padding-bottom: 18%; }
+    .dc-center img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .dc-center > span { position: relative; background: rgba(27,67,50,.85); color: #fff; font-weight: 700; font-size: clamp(0.65rem, 2.4vw, 0.95rem); width: 100%; text-align: center; padding: 4px 0 8%; }
+    .if-credit { font-size: 0.75rem; color: #888; margin-top: 1.5rem; line-height: 1.6; }
+    .if-credit a { color: #888; }
     @media (max-width: 768px) {
       .if-map, .if-sec { grid-template-columns: 1fr; }
       .if-sec:nth-of-type(even) .if-img { order: 0; }
@@ -73,32 +85,31 @@
 
   <!-- INTEGRATED FARM MODEL -->
   <div class="if-head">
-    <h2><span class="lang-en">2-acre integrated organic farm — model layout</span><span class="lang-ta">2 ஏக்கர் ஒருங்கிணைந்த இயற்கை பண்ணை — மாதிரி வரைபடம்</span></h2>
+    <h2><span class="lang-en">Integrated organic farm — model layout</span><span class="lang-ta">ஒருங்கிணைந்த இயற்கை பண்ணை — மாதிரி வரைபடம்</span></h2>
     <p class="sub" style="margin-bottom:0"><span class="lang-en">In an integrated farm, nothing is waste. Livestock feed the soil, the soil feeds crops and fodder, the pond stores water and grows fish, trees protect everything — and a farmhouse by the pond lets visitors experience it all. Lower cost, higher income.</span><span class="lang-ta">ஒருங்கிணைந்த பண்ணையில் எதுவும் கழிவு அல்ல. கால்நடைகள் மண்ணுக்கு உணவளிக்கின்றன, மண் பயிருக்கும் தீவனத்துக்கும் உணவளிக்கிறது, குளம் நீரைச் சேமித்து மீன் வளர்க்கிறது, மரங்கள் அனைத்தையும் பாதுகாக்கின்றன — குளத்தருகே உள்ள பண்ணை வீடு வருகையாளர்களுக்கு இதை நேரில் அனுபவிக்க உதவுகிறது. குறைந்த செலவு, நிறைந்த வருமானம்.</span></p>
   </div>
 
   <div class="if-map">
-    <img src="images/integrated-farm-layout.svg" alt="Top-down model layout of a 2-acre integrated organic farm with numbered zones" loading="lazy" />
+    <img src="images/integrated-farm-layout.svg" alt="Top-down model layout of an integrated organic farm with numbered zones" loading="lazy" />
     <div class="if-alloc">
-      <h3><span class="lang-en">Land allocation (2 acres = 200 cents)</span><span class="lang-ta">நில ஒதுக்கீடு (2 ஏக்கர் = 200 சென்ட்)</span></h3>
+      <h3><span class="lang-en">Farm zones</span><span class="lang-ta">பண்ணைப் பகுதிகள்</span></h3>
       <table>
-        <tr><td><span class="num">1</span><span class="lang-en">Livestock — cows, goats, country chicken</span><span class="lang-ta">கால்நடை — மாடு, ஆடு, நாட்டுக்கோழி</span></td><td>55</td></tr>
-        <tr><td><span class="num">2</span><span class="lang-en">Fish pond</span><span class="lang-ta">மீன் குளம்</span></td><td>20</td></tr>
-        <tr><td><span class="num">3</span><span class="lang-en">Crops with tree border</span><span class="lang-ta">மர வேலியுடன் பயிர் நிலம்</span></td><td>50</td></tr>
-        <tr><td><span class="num">4</span><span class="lang-en">Manure unit — biogas, compost, vermicompost</span><span class="lang-ta">உர அலகு — உயிர் வாயு, மட்கு உரம், மண்புழு உரம்</span></td><td>10</td></tr>
-        <tr><td><span class="num">5</span><span class="lang-en">Farmhouse &amp; agri-tour stay (by the pond)</span><span class="lang-ta">பண்ணை வீடு &amp; வேளாண் சுற்றுலா தங்குமிடம் (குளத்தருகே)</span></td><td>15</td></tr>
-        <tr><td><span class="num">6</span><span class="lang-en">Vegetables, fruit trees &amp; bees</span><span class="lang-ta">காய்கறி, பழ மரங்கள் &amp; தேனீ</span></td><td>30</td></tr>
-        <tr><td><span class="num">7</span><span class="lang-en">Green fodder, azolla &amp; herbal border</span><span class="lang-ta">பசுந்தீவனம், அசோலா &amp; மூலிகை வேலி</span></td><td>20</td></tr>
-        <tr class="total"><td><span class="lang-en">Total</span><span class="lang-ta">மொத்தம்</span></td><td>200 <span class="lang-en">cents</span><span class="lang-ta">சென்ட்</span></td></tr>
+        <tr><td><span class="num">1</span><span class="lang-en">Livestock — cows, goats, country chicken</span><span class="lang-ta">கால்நடை — மாடு, ஆடு, நாட்டுக்கோழி</span></td></tr>
+        <tr><td><span class="num">2</span><span class="lang-en">Fish pond</span><span class="lang-ta">மீன் குளம்</span></td></tr>
+        <tr><td><span class="num">3</span><span class="lang-en">Crops with tree border</span><span class="lang-ta">மர வேலியுடன் பயிர் நிலம்</span></td></tr>
+        <tr><td><span class="num">4</span><span class="lang-en">Manure unit — biogas, compost, vermicompost</span><span class="lang-ta">உர அலகு — உயிர் வாயு, மட்கு உரம், மண்புழு உரம்</span></td></tr>
+        <tr><td><span class="num">5</span><span class="lang-en">Farmhouse &amp; agri-tour stay (by the pond)</span><span class="lang-ta">பண்ணை வீடு &amp; வேளாண் சுற்றுலா தங்குமிடம் (குளத்தருகே)</span></td></tr>
+        <tr><td><span class="num">6</span><span class="lang-en">Vegetables, fruit trees &amp; bees</span><span class="lang-ta">காய்கறி, பழ மரங்கள் &amp; தேனீ</span></td></tr>
+        <tr><td><span class="num">7</span><span class="lang-en">Green fodder, azolla &amp; herbal border</span><span class="lang-ta">பசுந்தீவனம், அசோலா &amp; மூலிகை வேலி</span></td></tr>
       </table>
-      <p class="if-note"><span class="lang-en">A model only — adjust areas to your soil, water source, slope and budget. Paths, bunds and boundary trees run between the zones.</span><span class="lang-ta">இது ஒரு மாதிரி மட்டுமே — உங்கள் மண், நீர் ஆதாரம், நிலச்சரிவு, பட்ஜெட்டுக்கு ஏற்ப பரப்பை மாற்றிக்கொள்ளுங்கள். பகுதிகளுக்கு இடையே பாதை, வரப்பு, எல்லை மரங்கள் அமையும்.</span></p>
+      <p class="if-note"><span class="lang-en">A model only — adjust each zone to your land, soil, water source and budget. Paths, bunds and boundary trees run between the zones.</span><span class="lang-ta">இது ஒரு மாதிரி மட்டுமே — உங்கள் நிலம், மண், நீர் ஆதாரம், பட்ஜெட்டுக்கு ஏற்ப ஒவ்வொரு பகுதியையும் மாற்றிக்கொள்ளுங்கள். பகுதிகளுக்கு இடையே பாதை, வரப்பு, எல்லை மரங்கள் அமையும்.</span></p>
     </div>
   </div>
 
   <div class="if-list">
     <!-- 1. Livestock -->
     <section class="if-sec">
-      <div class="if-img"><img src="images/livestock.svg" alt="Cows, goats and country chicken near open sheds" loading="lazy" /></div>
+      <div class="if-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sahiwal_cows_at_the_dairy_unit_attached_to_Bhai_Ram_Singh_Memorial_%28Gurudwara%29_Bhaini_Sahib%2C_Ludhyana_%2CPunjab%2C_India.JPG?width=900" alt="Native Sahiwal cows at a dairy unit" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/livestock.svg'" /></div>
       <div class="if-txt">
         <h3><span class="num">1</span><span><span class="lang-en">Livestock — the heart of the farm</span><span class="lang-ta">கால்நடை — பண்ணையின் இதயம்</span></span></h3>
         <p><span class="lang-en">A few native cows, a small goat flock and free-range country chicken give daily milk, eggs and meat income — and, just as important, dung and urine that power every other part of the farm.</span><span class="lang-ta">சில நாட்டு மாடுகள், சிறிய ஆட்டு மந்தை, மேய்ச்சல் நாட்டுக்கோழிகள் தினசரி பால், முட்டை, இறைச்சி வருமானம் தருகின்றன — அதேபோல் முக்கியமாக, பண்ணையின் மற்ற எல்லாப் பகுதிகளையும் இயக்கும் சாணமும் கோமியமும் தருகின்றன.</span></p>
@@ -113,7 +124,7 @@
 
     <!-- 2. Fish pond -->
     <section class="if-sec">
-      <div class="if-img"><img src="images/fish-pond.svg" alt="Farm fish pond with fish, lotus and a fishing deck" loading="lazy" /></div>
+      <div class="if-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Madiaki_Kanichira_farm_and_pond.jpg?width=900" alt="Farm pond beside green fields" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/fish-pond.svg'" /></div>
       <div class="if-txt">
         <h3><span class="num">2</span><span><span class="lang-en">Fish pond — water bank &amp; extra income</span><span class="lang-ta">மீன் குளம் — நீர் வங்கி &amp; கூடுதல் வருமானம்</span></span></h3>
         <p><span class="lang-en">A farm pond harvests rainwater for dry months, recharges the well and grows fish such as rohu, catla and mrigal. The nutrient-rich pond water is excellent for irrigating crops.</span><span class="lang-ta">பண்ணைக் குளம் வறண்ட மாதங்களுக்கு மழைநீரைச் சேமிக்கிறது, கிணற்றை மீள்நிரப்புகிறது, ரோகு, கட்லா, மிருகால் போன்ற மீன்களை வளர்க்கிறது. சத்து நிறைந்த குள நீர் பயிர் பாசனத்துக்கு மிகச் சிறந்தது.</span></p>
@@ -128,7 +139,7 @@
 
     <!-- 3. Crops with tree border -->
     <section class="if-sec">
-      <div class="if-img"><img src="images/crops-tree-border.svg" alt="Paddy field bordered by coconut and shade trees" loading="lazy" /></div>
+      <div class="if-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rice_Paddy_Fields_in_Tamil_Nadu.jpg?width=900" alt="Paddy fields bordered by coconut trees in Tamil Nadu" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/crops-tree-border.svg'" /></div>
       <div class="if-txt">
         <h3><span class="num">3</span><span><span class="lang-en">Crops with a tree border</span><span class="lang-ta">மர வேலியுடன் பயிர் நிலம்</span></span></h3>
         <p><span class="lang-en">Traditional paddy, millets or pulses grow in the main field. A living border of coconut, teak, neem, drumstick and fruit trees around it breaks the wind, shelters birds that eat pests, and becomes a long-term timber and fruit asset.</span><span class="lang-ta">பாரம்பரிய நெல், சிறுதானியம் அல்லது பயறு முக்கிய வயலில் வளர்கிறது. அதைச் சுற்றி தென்னை, தேக்கு, வேம்பு, முருங்கை, பழ மரங்களின் உயிர் வேலி காற்றைத் தடுக்கிறது, பூச்சி உண்ணும் பறவைகளுக்கு இருப்பிடம் தருகிறது, நீண்டகால மரம் &amp; பழ சொத்தாகிறது.</span></p>
@@ -143,7 +154,7 @@
 
     <!-- 4. Fertilizer from livestock waste -->
     <section class="if-sec">
-      <div class="if-img"><img src="images/livestock-to-fertilizer.svg" alt="Biogas plant, vermicompost shed, compost heap and liquid manure drums" loading="lazy" /></div>
+      <div class="if-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Vermi_compost.JPG?width=900" alt="Vermicompost made from cattle dung" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/livestock-to-fertilizer.svg'" /></div>
       <div class="if-txt">
         <h3><span class="num">4</span><span><span class="lang-en">Fertilizer from livestock waste</span><span class="lang-ta">கால்நடைக் கழிவிலிருந்து உரம்</span></span></h3>
         <p><span class="lang-en">Dung, urine, poultry litter and crop residue are turned into the farm's own fertilizers — so you buy almost nothing from outside.</span><span class="lang-ta">சாணம், கோமியம், கோழி எச்சம், பயிர்க் கழிவுகள் பண்ணையின் சொந்த உரங்களாக மாற்றப்படுகின்றன — வெளியிலிருந்து வாங்க வேண்டியது மிகக் குறைவு.</span></p>
@@ -159,7 +170,7 @@
 
     <!-- 5. Agri-tour farmhouse -->
     <section class="if-sec">
-      <div class="if-img"><img src="images/agri-tour-farmhouse.svg" alt="Tiled-roof farmhouse beside the fish pond with visitors, deck, hammock and bullock cart" loading="lazy" /></div>
+      <div class="if-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tile_roof_in_Tamil_Nadu.jpg?width=900" alt="Traditional tiled-roof house in Tamil Nadu" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/agri-tour-farmhouse.svg'" /></div>
       <div class="if-txt">
         <h3><span class="num">5</span><span><span class="lang-en">Agri-tour farmhouse by the fish pond</span><span class="lang-ta">மீன் குளத்தருகே வேளாண் சுற்றுலா பண்ணை வீடு</span></span></h3>
         <p><span class="lang-en">A simple tiled-roof farmhouse with a veranda facing the pond turns the farm into a destination. Families and students come to see real village farming — and pay for the experience.</span><span class="lang-ta">குளத்தை நோக்கிய திண்ணையுடன் கூடிய எளிய ஓட்டு வீடு பண்ணையை ஒரு சுற்றுலாத் தலமாக்குகிறது. குடும்பங்களும் மாணவர்களும் உண்மையான கிராம விவசாயத்தைக் காண வருகின்றனர் — அந்த அனுபவத்துக்குக் கட்டணம் செலுத்துகின்றனர்.</span></p>
@@ -174,7 +185,7 @@
 
     <!-- 6. Vegetables & fruit trees -->
     <section class="if-sec">
-      <div class="if-img"><img src="images/veg-fruit-garden.svg" alt="Vegetable beds, fruit trees, banana and beehives next to the farmhouse" loading="lazy" /></div>
+      <div class="if-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Brinjal_Plant.JPG?width=900" alt="Brinjal plants in a vegetable garden" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/veg-fruit-garden.svg'" /></div>
       <div class="if-txt">
         <h3><span class="num">6</span><span><span class="lang-en">Vegetables &amp; fruit trees near the farmhouse</span><span class="lang-ta">பண்ணை வீட்டருகே காய்கறி &amp; பழ மரங்கள்</span></span></h3>
         <p><span class="lang-en">Kept right next to the house so they are watered, watched and harvested daily. Visitors can pick their own vegetables and fruit — a favourite agri-tour activity.</span><span class="lang-ta">தினமும் நீர் பாய்ச்ச, கவனிக்க, அறுவடை செய்ய வசதியாக வீட்டுக்கு அருகிலேயே. வருகையாளர்கள் தாங்களே காய்கறி, பழம் பறிக்கலாம் — வேளாண் சுற்றுலாவில் மிகவும் விரும்பப்படும் செயல்.</span></p>
@@ -189,7 +200,7 @@
 
     <!-- 7. Green fodder & herbal border -->
     <section class="if-sec">
-      <div class="if-img"><img src="images/green-fodder-herbal-border.svg" alt="Cattle shed bordered by tall green fodder grass and flowering herbal plants" loading="lazy" /></div>
+      <div class="if-img"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Harvesting_Napier.jpg?width=900" alt="Harvesting Napier fodder grass" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='images/green-fodder-herbal-border.svg'" /></div>
       <div class="if-txt">
         <h3><span class="num">7</span><span><span class="lang-en">Green fodder &amp; herbal plant border</span><span class="lang-ta">பசுந்தீவனம் &amp; மூலிகைச் செடி வேலி</span></span></h3>
         <p><span class="lang-en">Instead of a bare fence, the livestock area and the farmhouse are bordered with green fodder and herbal plants. The border feeds the animals, keeps dust and smell away from guests, and supplies home remedies.</span><span class="lang-ta">வெறும் வேலிக்குப் பதிலாக, கால்நடைப் பகுதியும் பண்ணை வீடும் பசுந்தீவனம் மற்றும் மூலிகைச் செடிகளால் சூழப்படுகின்றன. இந்த வேலி கால்நடைகளுக்கு உணவளிக்கிறது, விருந்தினர்களிடமிருந்து தூசி, நாற்றத்தைத் தடுக்கிறது, வீட்டு மருத்துவத்துக்கும் உதவுகிறது.</span></p>
@@ -201,6 +212,25 @@
         <a class="if-more" href="dairy-fodder-silage.html"><span class="lang-en">Fodder &amp; silage guide →</span><span class="lang-ta">பசுந்தீவனம் &amp; ஊறுகாய்ப்புல் வழிகாட்டி →</span></a>
       </div>
     </section>
+  </div>
+
+
+  <!-- DAIRY INCOME CYCLE -->
+  <div class="dc-wrap">
+    <h2><span class="lang-en">Dairy farm cycle — every output is income</span><span class="lang-ta">பால் பண்ணைச் சுழற்சி — ஒவ்வொரு விளைவும் வருமானம்</span></h2>
+    <p class="sub"><span class="lang-en">Fodder feeds the herd, the herd gives milk and calves, dung becomes biogas and vermicompost, and compost grows the next fodder crop. Items marked <b>₹</b> can also be sold.</span><span class="lang-ta">தீவனம் மந்தைக்கு உணவாகிறது, மந்தை பாலும் கன்றும் தருகிறது, சாணம் உயிர் வாயுவாகவும் மண்புழு உரமாகவும் மாறுகிறது, உரம் அடுத்த தீவனப் பயிரை வளர்க்கிறது. <b>₹</b> குறியிட்டவை விற்பனைக்கும் உரியவை.</span></p>
+    <div class="dc">
+      <svg class="dc-arrows" viewBox="0 0 100 100" aria-hidden="true"><defs><marker id="dcah" markerWidth="3.4" markerHeight="3.4" refX="1.7" refY="1.7" orient="auto"><path d="M0 0 L3.4 1.7 L0 3.4Z" fill="#b5442b"/></marker></defs><g stroke="#b5442b" stroke-width="0.9" marker-end="url(#dcah)"><line x1="71.5" y1="13.0" x2="61.7" y2="13.0"/><line x1="71.5" y1="13.0" x2="29.7" y2="13.0"/><line x1="50.0" y1="23.5" x2="50.0" y2="32.8"/><line x1="24.9" y1="20.9" x2="38.7" y2="37.0"/><line x1="75.1" y1="20.9" x2="61.3" y2="37.0"/><line x1="34.0" y1="50.0" x2="29.7" y2="50.0"/><line x1="39.5" y1="62.1" x2="25.7" y2="78.2"/><line x1="60.5" y1="62.1" x2="74.3" y2="78.2"/><line x1="71.5" y1="87.0" x2="61.7" y2="87.0"/><line x1="82.0" y1="76.5" x2="82.0" y2="61.7"/><line x1="82.0" y1="39.5" x2="82.0" y2="24.7"/><line x1="50.0" y1="76.5" x2="50.0" y2="67.2"/></g></svg>
+      <div class="dc-center"><b class="dc-fallback">🐄</b><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sahiwal-_breed_cow_at_the_dairy_unit_attached_to_Bhai_Ram_Singh_Memorial_%28Gurudwara%29_%2C_Bhaini_Sahib_%2CLudhyana%2C_Punjab_%2CIndia.JPG?width=500" alt="Dairy cows" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" /><span><span class="lang-en">Dairy farm</span><span class="lang-ta">பால் பண்ணை</span></span></div>
+      <div class="dc-node" style="left:82%;top:13%"><div class="dc-ico">🌾<span class="dc-inc" title="Source of income">₹</span></div><div class="dc-lbl"><span class="lang-en">Crop &amp; fodder</span><span class="lang-ta">பயிர் &amp; தீவனம்</span></div></div>
+      <div class="dc-node" style="left:50%;top:13%"><div class="dc-ico">🌽</div><div class="dc-lbl"><span class="lang-en">Silage</span><span class="lang-ta">ஊறுகாய்ப்புல்</span></div></div>
+      <div class="dc-node" style="left:18%;top:13%"><div class="dc-ico">🌰<span class="dc-inc" title="Source of income">₹</span></div><div class="dc-lbl"><span class="lang-en">Feed &amp; concentrate</span><span class="lang-ta">தீவனம் &amp; அடர்தீவனம்</span></div></div>
+      <div class="dc-node" style="left:18%;top:50%"><div class="dc-ico">🐄<span class="dc-inc" title="Source of income">₹</span></div><div class="dc-lbl"><span class="lang-en">Calves</span><span class="lang-ta">கன்றுகள்</span></div></div>
+      <div class="dc-node" style="left:82%;top:50%"><div class="dc-ico">🪱<span class="dc-inc" title="Source of income">₹</span></div><div class="dc-lbl"><span class="lang-en">Vermicompost</span><span class="lang-ta">மண்புழு உரம்</span></div></div>
+      <div class="dc-node" style="left:18%;top:87%"><div class="dc-ico">🥛<span class="dc-inc" title="Source of income">₹</span></div><div class="dc-lbl"><span class="lang-en">Milk &amp; products</span><span class="lang-ta">பால் &amp; பால் பொருட்கள்</span></div></div>
+      <div class="dc-node" style="left:50%;top:87%"><div class="dc-ico">🔥</div><div class="dc-lbl"><span class="lang-en">Biogas → gas &amp; power</span><span class="lang-ta">உயிர் வாயு → எரிவாயு &amp; மின்சாரம்</span></div></div>
+      <div class="dc-node" style="left:82%;top:87%"><div class="dc-ico">🟤<span class="dc-inc" title="Source of income">₹</span></div><div class="dc-lbl"><span class="lang-en">Dung &amp; slurry</span><span class="lang-ta">சாணம் &amp; கரைசல்</span></div></div>
+    </div>
   </div>
 
   <!-- HOW IT CONNECTS -->
@@ -215,6 +245,7 @@
     </div>
   </div>
 
+  <p class="if-credit"><span class="lang-en">Photos: Wikimedia Commons, used under Creative Commons licences — </span><span class="lang-ta">படங்கள்: விக்கிமீடியா காமன்ஸ், கிரியேட்டிவ் காமன்ஸ் உரிமத்தின் கீழ் — </span><a href="https://commons.wikimedia.org/wiki/File:Sahiwal_cows_at_the_dairy_unit_attached_to_Bhai_Ram_Singh_Memorial_%28Gurudwara%29_Bhaini_Sahib%2C_Ludhyana_%2CPunjab%2C_India.JPG" target="_blank" rel="noopener">Harvinder Chandigarh</a>, <a href="https://commons.wikimedia.org/wiki/File:Madiaki_Kanichira_farm_and_pond.jpg" target="_blank" rel="noopener">Vijayanrajapuram</a>, <a href="https://commons.wikimedia.org/wiki/File:Rice_Paddy_Fields_in_Tamil_Nadu.jpg" target="_blank" rel="noopener">KARTY JazZ</a>, <a href="https://commons.wikimedia.org/wiki/File:A_Vermi_compost.JPG" target="_blank" rel="noopener">Thamizhpparithi Maari</a>, <a href="https://commons.wikimedia.org/wiki/File:Tile_roof_in_Tamil_Nadu.jpg" target="_blank" rel="noopener">Karthickbala</a>, <a href="https://commons.wikimedia.org/wiki/File:A_Brinjal_Plant.JPG" target="_blank" rel="noopener">Thamizhpparithi Maari</a>, <a href="https://commons.wikimedia.org/wiki/File:Harvesting_Napier.jpg" target="_blank" rel="noopener">Napier harvest</a>.</p>
 </main>
 
 <script src="js/template.js?v=20261122c"></script>
